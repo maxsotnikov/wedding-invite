@@ -1,5 +1,5 @@
 import s from './Header.module.css'
-import {Nav, type NavItemProps} from './Navigation/Nav.tsx';
+import {Nav, type NavItemProps} from './navigation/Nav.tsx';
 
 const leftNav: NavItemProps[] = [
   {title: 'Наша история', link: '/'},
