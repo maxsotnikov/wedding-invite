@@ -7,14 +7,17 @@ const leftNav: NavItemProps[] = [
   {title: 'Информация', link: '/'},
 ]
 const rightNav: NavItemProps[] = [
-  {title: 'FAQS', link: '/'},
+  {title: 'Подробнее', link: '/'},
   {title: 'Заполнить', link: '/'},
 ]
 
 export const Header = () => {
   return (
     <header className={s.header}>
-      <Nav items={leftNav} />
+      <Nav
+        items={leftNav}
+        className={s.navLeft}
+      />
       <h1 className={s.h1}>МАКСИМ & ИННА</h1>
       <Nav
         items={rightNav}

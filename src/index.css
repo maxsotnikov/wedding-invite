@@ -66,3 +66,29 @@
 /*    background-color: #f9f9f9;*/
 /*  }*/
 /*}*/
+
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: "Epilogue",sans-serif;*/
+  min-width: 375px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
