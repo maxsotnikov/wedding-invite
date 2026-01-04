@@ -1,4 +1,5 @@
-@import "src/assets/fonts/fonts.css";
+@use '../../styles/variables' as *;
+@import "../../assets/fonts/fonts.scss";
 
 .header {
   display: grid;
@@ -7,35 +8,20 @@
   gap: 40px;
   padding: 1.4vw 2vw;
 
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 14px;
 }
 
-.navLeft {
-  max-width: 350px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  /*text-align: center;*/
-}
-
 .navRight {
-  display: flex;
   justify-self: end;
-  gap: 20px;
-  text-transform: uppercase;
 }
 
-.h1 {
+.title {
   font-family: 'Cormorant SC';
   font-size: 43px;
   font-weight: 600;
   align-self: center;
   text-transform: uppercase;
-}
-
-a {
-  color: black;
+  color: $primaryColor
 }

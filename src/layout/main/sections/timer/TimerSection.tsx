@@ -1,5 +1,5 @@
 import s from './Timer.module.css'
-import background from '../../../../../assets/images/tasha-marie-kCdjXEsCm2I-unsplash.webp'
+import background from '../../../../assets/images/tasha-marie-kCdjXEsCm2I-unsplash.webp'
 
 export const TimerSection = () => {
   return (

@@ -1,5 +1,5 @@
-import registryPhoto from '../../../../../assets/images/karolina-grabowska-yH50AWO8ZRo-unsplash.webp'
-import dressCodePhoto from '../../../../../assets/images/karolina-grabowska-p2gsaMgCsMg-unsplash.webp'
+import registryPhoto from '../../../../assets/images/karolina-grabowska-yH50AWO8ZRo-unsplash.webp'
+import dressCodePhoto from '../../../../assets/images/karolina-grabowska-p2gsaMgCsMg-unsplash.webp'
 
 export const RegistrySection = () => {
   return (

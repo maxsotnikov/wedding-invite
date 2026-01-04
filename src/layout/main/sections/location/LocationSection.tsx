@@ -1,5 +1,5 @@
 import s from './Location.module.css'
-import location from '../../../../../assets/images/alejandro-luengo-Fm_TvVmuHq4-unsplash+(1).webp'
+import location from '../../../../assets/images/alejandro-luengo-Fm_TvVmuHq4-unsplash+(1).webp'
 
 export const LocationSection = () => {
   return (

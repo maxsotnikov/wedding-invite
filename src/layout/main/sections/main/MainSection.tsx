@@ -1,9 +1,9 @@
 import firstPhoto
-  from '../../../../../assets/images/olga-solodilova-Idqe3vQ-8qo-unsplash.webp'
+  from '../../../../assets/images/olga-solodilova-Idqe3vQ-8qo-unsplash.webp'
 import secondPhoto
-  from '../../../../../assets/images/olga-solodilova-Ty1NNPJUsW8-unsplash.webp'
+  from '../../../../assets/images/olga-solodilova-Ty1NNPJUsW8-unsplash.webp'
 import thirdPhoto
-  from '../../../../../assets/images/olga-solodilova-LeQVHiw5nww-unsplash.webp'
+  from '../../../../assets/images/olga-solodilova-LeQVHiw5nww-unsplash.webp'
 import s from './MainSection.module.css'
 
 export const MainSection = () => {

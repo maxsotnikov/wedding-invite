@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as *;
+
+.list {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 20px;
+}
+
+.link {
+  color: $primaryColor
+}
+
+.button {
+  padding: 16px 24px;
+  border: 1px solid $primaryColor;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    transition: .1s background-color linear,.1s color linear;
+  }
+}

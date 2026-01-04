@@ -7,12 +7,12 @@ import {RegistrySection} from './sections/registry/RegistrySection.tsx';
 
 export const Main = () => {
   return (
-    <article>
+    <main>
       <MainSection/>
       <SheduleSection/>
       <LocationSection/>
       <TimerSection/>
       <RegistrySection/>
-    </article>
+    </main>
   );
 };
