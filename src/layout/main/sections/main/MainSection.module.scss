@@ -1,3 +1,9 @@
+@import '../../../../styles/globalStyles';
+
+.contentWrapper {
+  @extend %container;
+}
+
 .imageWrapper {
   display: grid;
   grid-template-columns: 307px 625px 307px;
