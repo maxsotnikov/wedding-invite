@@ -14,7 +14,7 @@ const rightNav: NavItemProps[] = [
 export const Header = () => {
   return (
     <header className={s.header}>
-      <div className={s.wrapper}>
+      <div className={s.container}>
         <Nav items={leftNav} className={s.navLeft}/>
         <h1 className={s.title}>Максим & Инна</h1>
         <Nav

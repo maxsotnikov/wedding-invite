@@ -1,6 +1,5 @@
-@use '../../styles/variables' as *;
-@import "../../assets/fonts/fonts.scss";
-@import '../../styles/globalStyles';
+@import "@/assets/fonts/fonts.scss";
+@import '@/styles/globalStyles';
 
 .header {
   padding: 1.4vw 0;
@@ -10,7 +9,7 @@
   font-size: clamp(10px, 1vw, 15px);
 }
 
-.wrapper {
+.container {
   @extend %container;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -28,5 +27,4 @@
   font-weight: 600;
   justify-self: center;
   text-transform: uppercase;
-  color: $primaryColor
 }

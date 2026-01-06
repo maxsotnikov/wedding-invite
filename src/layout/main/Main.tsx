@@ -4,7 +4,6 @@ import {LocationSection} from './sections/location/LocationSection.tsx';
 import {TimerSection} from './sections/timer/TimerSection.tsx';
 import {RegistrySection} from './sections/registry/RegistrySection.tsx';
 
-
 export const Main = () => {
   return (
     <main>
