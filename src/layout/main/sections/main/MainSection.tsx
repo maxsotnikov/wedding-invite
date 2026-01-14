@@ -23,8 +23,7 @@ export const MainSection = () => {
             alt=""
             className={style.img}
           />
-            <p className={style.text}>Join us as we embark on a journey of
-              love, joy, and eternal happiness.</p>
+            <p className={style.text}>Join us as we embark on a journey of love, joy, and eternal happiness.</p>
           </div>
           <img
             src={thirdPhoto}
@@ -33,8 +32,6 @@ export const MainSection = () => {
           />
           <h2 className={style.date}>10 · 05 ·2026</h2>
         </div>
-        {/*<p className={style.text}>Join us as we embark on a journey of love, joy,*/}
-        {/*  and eternal happiness.</p>*/}
       </div>
 
     </section>

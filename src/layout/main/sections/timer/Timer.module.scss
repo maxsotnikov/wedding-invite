@@ -1,0 +1,64 @@
+@use '@/styles/variables' as *;
+@import '@/styles/globalStyles';
+
+.section {
+  padding: 6vw 0;
+  background-image: url('@/assets/images/tasha-marie-kCdjXEsCm2I-unsplash.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  position: relative;
+  color: $secondaryColor;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: clamp(10px, 8vw, 20px);
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 15, 15, 0.6); // черный с 50% прозрачности
+    z-index: 1; // поверх фона, но под контентом
+  }
+}
+
+.content {
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.timer {
+  display: flex;
+  gap: 20px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > span:first-child {
+      font-family: 'Cormorant SC', sans-serif; // или другой шрифт
+      font-weight: 500;
+      font-size: clamp(30px, 10vw, 150px);
+    }
+  }
+}
+
+
+.title {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: clamp(10px, 8vw, 20px);
+  text-transform: uppercase;
+}

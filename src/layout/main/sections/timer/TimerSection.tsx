@@ -1,28 +1,12 @@
-import s from './Timer.module.css'
-import background from '../../../../assets/images/tasha-marie-kCdjXEsCm2I-unsplash.webp'
+import style from './Timer.module.scss'
+import {Timer} from '@/layout/main/sections/timer/Timer/Timer.tsx';
 
 export const TimerSection = () => {
   return (
-    <section className={s.section}>
-      <img src={background}/>
-      <h3>Обратный отсчет</h3>
-      <div>
-        <div>
-          <span>120</span>
-          <span>дней</span>
-        </div>
-        <div>
-          <span>20</span>
-          <span>часов</span>
-        </div>
-        <div>
-          <span>30</span>
-          <span>минут</span>
-        </div>
-        <div>
-          <span>30</span>
-          <span>секунд</span>
-        </div>
+    <section className={style.section}>
+      <div className={style.content}>
+        <h3 className={style.title}>Обратный отсчет</h3>
+        <Timer date={new Date('2026-05-10T16:00:00Z')} />
       </div>
     </section>
   );

@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+@mixin media($media) {
+  @if $media == s {
+    @media (max-width: $s) { @content; }
+  }
+  @else if $media == m {
+    @media (max-width: $m) { @content; }
+  }
+  @else if $media == l {
+    @media (max-width: $l) { @content; }
+  }
+  @else if $media == xl {
+    @media (max-width: $xl) { @content; }
+  }
+  @else if $media == xxl {
+    @media (max-width: $xxl) { @content; }
+  }
+}
