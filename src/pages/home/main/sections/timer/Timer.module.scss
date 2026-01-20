@@ -2,18 +2,17 @@
 @import '@/styles/globalStyles';
 
 .section {
-  padding: 6vw 0;
   background-image: url('@/assets/images/tasha-marie-kCdjXEsCm2I-unsplash.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 50%;
   position: relative;
   color: $secondaryColor;
+  min-height: 100vh;
 
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: clamp(10px, 8vw, 20px);
-  text-transform: uppercase;
 
   &::before {
     content: '';
@@ -22,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(16, 15, 15, 0.6); // черный с 50% прозрачности
+    background-color: rgba(19, 17, 17, 0.87); // черный с 50% прозрачности
     z-index: 1; // поверх фона, но под контентом
   }
 }
@@ -39,7 +38,7 @@
 
 .timer {
   display: flex;
-  gap: 20px;
+  gap: clamp(50px, 1vw, 2vw);
 
   & > div {
     display: flex;
@@ -57,8 +56,9 @@
 
 
 .title {
-  font-family: 'Montserrat';
+//  font-family: 'Montserrat';
+  font-family: 'Cormorant SC', sans-serif;
+
   font-weight: 500;
-  font-size: clamp(10px, 8vw, 20px);
-  text-transform: uppercase;
+  font-size: clamp(10px, 8vw, 60px);
 }

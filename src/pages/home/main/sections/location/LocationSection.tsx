@@ -3,19 +3,18 @@ import location from '@/assets/images/alejandro-luengo-Fm_TvVmuHq4-unsplash+(1).
 
 export const LocationSection = () => {
   return (
-    <section className={style.section}>
+    <section>
       <div className={style.container}>
         <div className={style.content}>
-
           <div className={style.main}>
             <a
             href={'/'}
-            className={style.a}
+            className={style.link}
           >
             Усадьба Марьянино
           </a>
-            <div>
-              <h2 className={style.title}>Location</h2>
+            <div className={style.imageWrapper}>
+              <h2 className={style.title}>Локация</h2>
               <img
                 src={location}
                 className={style.img}
@@ -23,8 +22,8 @@ export const LocationSection = () => {
             </div>
             <a
               href={'/'}
-              className={style.a}
-            >Место</a></div>
+              className={style.link}
+            >Карта</a></div>
           <button className={style.button}>Проезд и проживание</button>
         </div>
       </div>

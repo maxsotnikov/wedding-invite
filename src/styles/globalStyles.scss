@@ -6,12 +6,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 body {
   min-width: 375px;
   background-color: $secondaryColor;
   color: $primaryColor;
+}
+
+section {
+  padding: 8vw 0;
 }
 
 a {
@@ -32,5 +37,5 @@ button {
 //  padding: 0 15px;
   padding-inline: clamp(15px, 1vw, 50px);
   margin: 0 auto;
-//  border: 1px solid red;
+//  border: 2px solid red;
 }

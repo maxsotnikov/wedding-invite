@@ -1,59 +1,63 @@
 @use '@/styles/variables' as *;
 @import '@/styles/globalStyles';
 
-.section {
-  padding: 6vw 0;
-}
-
 .container {
   @extend %container;
 }
 
 .content {
   text-align: center;
-
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-//    gap: min(1vw, 50px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: clamp(50px, 1vw, 2vw);
-    align-items: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 25vw;
+  margin: 0 auto;
 }
 
 .title {
-  font-family: 'Cormorant SC';
+  font-family: 'Cormorant SC', sans-serif;
   font-weight: 500;
-  font-size: clamp(30px, 8vw, 80px);
-  text-transform: uppercase;
+  font-size:clamp(30px, 5vw, 90px);
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%); // наполовину наружу картинки
+  z-index: 2;
 }
 
-.a {
-  font-family: 'Montserrat';
+.link {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: clamp(10px, 8vw, 20px);
   color: $primaryColor;
-  text-transform: uppercase;
   text-decoration: underline black;
+  text-underline-offset: 4px;
 }
 
 .img {
-//  max-width: 460px;
-//  width: 100%;
-//  height: auto;
   margin-bottom: clamp(50px, 2vw, 5vw);
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  display: block;
 }
 
 .button {
   border: 1px solid black;
-  padding-top: clamp(8px, 1vw, 16px );
-  padding-bottom: clamp(8px, 1vw, 16px );
-  padding-left: clamp(12px, 1vw, 24px );
-  padding-right: clamp(12px, 1vw, 24px );
+  padding-top: clamp(8px, 1vw, 16px);
+  padding-bottom: clamp(8px, 1vw, 16px);
+  padding-left: clamp(12px, 1vw, 24px);
+  padding-right: clamp(12px, 1vw, 24px);
   background-color: $primaryColor;
   color: $secondaryColor;
   transition: opacity 0.1s linear;
@@ -61,7 +65,6 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: clamp(10px, 1vw, 15px);
-  text-transform: uppercase;
 
   &:hover {
     opacity: 0.9;

@@ -1,4 +1,4 @@
-@import "@/assets/fonts/fonts.scss";
+@import "@/assets/fonts/fonts";
 @import '@/styles/globalStyles';
 
 .header {
@@ -26,5 +26,4 @@
   font-size: clamp(20px, 5vw, 50px);
   font-weight: 600;
   justify-self: center;
-  text-transform: uppercase;
 }

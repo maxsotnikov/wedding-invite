@@ -1,11 +1,11 @@
-import style from '@/layout/main/sections/timer/Timer.module.scss';
+import style from '@/pages/home/main/sections/timer/Timer.module.scss';
 import {useEffect, useState} from 'react';
 import {
   calculateDiff
-} from '@/layout/main/sections/timer/Timer/features/calculateDIff.ts';
+} from '@/pages/home/main/sections/timer/Timer/features/calculateDIff.ts';
 import {
   pluralize
-} from '@/layout/main/sections/timer/Timer/features/pluralize.ts';
+} from '@/pages/home/main/sections/timer/Timer/features/pluralize.ts';
 
 type Props = {
   date: Date
@@ -14,7 +14,8 @@ type Props = {
 export const Timer = ({date}: Props) => {
   const finishTime = date.getTime()
 
-  const [[days, hours, minutes, seconds], setDiff] = useState<Array<number>>(() => calculateDiff(finishTime));
+  const [diff, setDiff] = useState<Array<number>>(() => calculateDiff(finishTime));
+const [days, hours, minutes, seconds] = diff
 
   useEffect(() => {
     const intervalId = setInterval(() => {

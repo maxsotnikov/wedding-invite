@@ -1,6 +1,6 @@
-import {Header} from '../layout/header/Header.tsx';
-import {Main} from '../layout/main/Main.tsx';
-import {Footer} from '../layout/footer/Footer.tsx';
+import {Header} from '@/pages/home/header/Header.tsx';
+import {Main} from '@/pages/home/main/Main.tsx';
+import {Footer} from '@/pages/home/footer/Footer.tsx';
 
 function App() {
 

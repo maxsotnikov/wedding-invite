@@ -1,6 +1,6 @@
 import firstPhoto
   from '@/assets/images/olga-solodilova-Idqe3vQ-8qo-unsplash.webp'
-import secondPhoto
+import mainPhoto
   from '@/assets/images/olga-solodilova-Ty1NNPJUsW8-unsplash.webp'
 import thirdPhoto
   from '@/assets/images/olga-solodilova-LeQVHiw5nww-unsplash.webp'
@@ -8,32 +8,27 @@ import style from './MainSection.module.scss'
 
 export const MainSection = () => {
   return (
-    <section className={style.mainSection}>
+    <section>
       <div className={style.container}>
-        <div className={style.imageWrapper}>
+        <div className={style.content}>
           <img
             src={firstPhoto}
             alt=""
-            className={style.img}
           />
-
-          <div className={style.wrap}>
+          <div className={style.mainPhotoWrapper}>
             <img
-            src={secondPhoto}
+            src={mainPhoto}
             alt=""
-            className={style.img}
           />
-            <p className={style.text}>Join us as we embark on a journey of love, joy, and eternal happiness.</p>
+            <p className={style.text}>Мы приглашаем вас разделить с нами этот особенный день</p>
           </div>
           <img
             src={thirdPhoto}
             alt=""
-            className={style.img}
           />
           <h2 className={style.date}>10 · 05 ·2026</h2>
         </div>
       </div>
-
     </section>
   );
 };

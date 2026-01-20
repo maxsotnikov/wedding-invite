@@ -1,14 +1,10 @@
 @import '@/styles/globalStyles';
 
-.mainSection {
-  padding: 6vw 0;
-}
-
 .container {
   @extend %container;
 }
 
-.imageWrapper {
+.content {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -16,15 +12,21 @@
   align-items: center;
   justify-items: center;
 
-  .img {
+  img {
     width: 100%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
   }
 }
 
-.imageWrapper img:nth-child(2) {
-  aspect-ratio: 3 / 4;
+.mainPhotoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  img {
+    aspect-ratio: 3 / 4;
+  }
 }
 
 .date {
@@ -33,7 +35,7 @@
   top: 25%;
   left: 50%;
 
-  font-family: 'Cormorant SC';
+  font-family: 'Cormorant SC', sans-serif;
   font-weight: 600;
   font-size: clamp(30px, 10vw, 150px);
   transform: translate(-50%, -50%);
@@ -45,23 +47,18 @@
   font-weight: 400;
   text-align: center;
   font-size: clamp(15px, 2vw, 22px);
-  text-transform: uppercase;
   white-space: break-spaces;
 
 }
 
-.wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+
 
 @media (max-width: 768px) {
-  .imageWrapper {
+  .content {
     grid-template-columns: 1fr;
   }
 
-  .img {
+  img {
     aspect-ratio: 3 / 4;
   }
 }
