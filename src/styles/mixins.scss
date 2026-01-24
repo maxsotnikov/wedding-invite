@@ -1,8 +1,8 @@
 @use 'variables' as *;
 
 @mixin media($media) {
-  @if $media == s {
-    @media (max-width: $s) { @content; }
+  @if $media == tablet {
+    @media (max-width: $tablet) { @content; }
   }
   @else if $media == m {
     @media (max-width: $m) { @content; }

@@ -7,7 +7,7 @@ export const TimerSection = () => {
       <div className={style.container}>
         <div className={style.content}>
           <h2 className={style.title}>Обратный отсчет</h2>
-          <Timer date={new Date('2026-05-10T16:00:00Z')} />
+          <Timer date={new Date('2026-05-10T16:00:00+03:00')} />
         </div>
       </div>
     </section>

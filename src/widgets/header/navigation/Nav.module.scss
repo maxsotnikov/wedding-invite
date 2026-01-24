@@ -2,8 +2,6 @@
 
 .list {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   gap: clamp(20px, 1vw, 2vw);
 }
 

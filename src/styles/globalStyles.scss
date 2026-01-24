@@ -24,7 +24,7 @@ section {
 
 h2, h3 {
   font-family: 'Cormorant SC', sans-serif;
-  font-weight: 500;
+  font-weight: inherit;
 }
 
 a {
@@ -43,9 +43,9 @@ button {
   transition: opacity 0.1s linear;
   cursor: pointer;
 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: clamp(10px, 1vw, 15px);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: clamp(14px, 1vw, 18px);
   color: $secondaryColor;
 
   &:hover {
@@ -58,5 +58,5 @@ button {
   width: 100%;
   padding-inline: clamp(15px, 1vw, 50px);
   margin: 0 auto;
-//  border: 2px solid red;
+  border: 2px solid red;
 }

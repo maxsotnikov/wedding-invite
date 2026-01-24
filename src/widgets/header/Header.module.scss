@@ -1,10 +1,11 @@
 @use "@/styles/globalStyles" as *;
 @use '@/assets/fonts/fonts' as *;
+@use '@/styles/mixins' as *;
 
 .header {
   padding: 1.4vw 0;
 
-  font-size: clamp(10px, 1vw, 15px);
+  font-size: clamp(12px, 1vw, 18px);
 }
 
 .container {
@@ -19,10 +20,27 @@
   justify-self: end;
 }
 
+.navLeft, .navRight, {
+  @include media(tablet) {
+    display: none;
+  }
+;
+}
+
 .title {
   justify-self: center;
+  grid-column: 2;
 
   font-family: 'Cormorant SC', sans-serif;
   font-size: clamp(20px, 5vw, 50px);
   font-weight: 600;
+}
+
+.menu {
+  display: none;
+
+  @include media(tablet) {
+    display: block;
+    justify-self: end;
+  }
 }

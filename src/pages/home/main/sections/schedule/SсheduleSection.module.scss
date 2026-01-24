@@ -60,8 +60,7 @@
 
     & > span:first-child {
       font-family: 'Cormorant SC', sans-serif;
-      font-weight: 500;
-      font-size: clamp(20px, 5vw, 80px);
+      font-size: clamp(1rem, 5.8vw, 6rem);
     }
 
     & > span:last-child {

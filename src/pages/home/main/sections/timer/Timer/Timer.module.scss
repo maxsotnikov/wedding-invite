@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  column-gap: clamp(50px, 2vw, 4vw);
+  column-gap: clamp(70px, 2vw, 200px);
 
 
   & > div {
@@ -17,7 +17,7 @@
       font-size: clamp(30px, 10vw, 150px);
     }
     & > span:last-child {
-      font-size: clamp(0.8rem, 1.3vw, 1.6rem);
+      font-size: clamp(16px, 1.3vw, 30px);
     }
   }
 }

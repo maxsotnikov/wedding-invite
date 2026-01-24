@@ -1,0 +1,42 @@
+@use '@/styles/variables' as *;
+
+.button {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+
+  .line {
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    top: 50%;
+    right: 0;
+    background-color: $primaryColor;
+    transition: transform 0.3s ease;
+
+    &:first-child {
+      transform: rotate(0deg);
+    }
+
+    // Вертикальная линия
+    &:last-child {
+      transform: rotate(90deg);
+    }
+  }
+
+  &.open {
+    .line {
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+
+
