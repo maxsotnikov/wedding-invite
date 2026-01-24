@@ -1,11 +1,9 @@
-@import "@/assets/fonts/fonts";
-@import '@/styles/globalStyles';
+@use "@/styles/globalStyles" as *;
+@use '@/assets/fonts/fonts' as *;
 
 .header {
   padding: 1.4vw 0;
 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
   font-size: clamp(10px, 1vw, 15px);
 }
 
@@ -22,8 +20,9 @@
 }
 
 .title {
-  font-family: 'Cormorant SC';
+  justify-self: center;
+
+  font-family: 'Cormorant SC', sans-serif;
   font-size: clamp(20px, 5vw, 50px);
   font-weight: 600;
-  justify-self: center;
 }

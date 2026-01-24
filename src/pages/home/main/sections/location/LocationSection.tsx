@@ -1,5 +1,7 @@
 import style from './Location.module.scss'
-import location from '@/assets/images/alejandro-luengo-Fm_TvVmuHq4-unsplash+(1).webp'
+import location
+  from '@/assets/images/alejandro-luengo-Fm_TvVmuHq4-unsplash+(1).webp'
+import {Button} from '@/shared/Button.tsx';
 
 export const LocationSection = () => {
   return (
@@ -8,23 +10,23 @@ export const LocationSection = () => {
         <div className={style.content}>
           <div className={style.main}>
             <a
-            href={'/'}
-            className={style.link}
-          >
-            Усадьба Марьянино
-          </a>
-            <div className={style.imageWrapper}>
+              href={'/'}
+              className={style.link}
+            >
+              Усадьба Марьянино
+            </a>
+            <div className={style.wrapper}>
               <h2 className={style.title}>Локация</h2>
               <img
                 src={location}
-                className={style.img}
+                alt={'photo location'}
               />
             </div>
             <a
               href={'/'}
               className={style.link}
             >Карта</a></div>
-          <button className={style.button}>Проезд и проживание</button>
+          <Button title={'Проезд и проживание'}/>
         </div>
       </div>
     </section>

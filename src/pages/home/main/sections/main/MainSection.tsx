@@ -13,18 +13,19 @@ export const MainSection = () => {
         <div className={style.content}>
           <img
             src={firstPhoto}
-            alt=""
+            alt="photo"
           />
           <div className={style.mainPhotoWrapper}>
             <img
-            src={mainPhoto}
-            alt=""
-          />
-            <p className={style.text}>Мы приглашаем вас разделить с нами этот особенный день</p>
+              src={mainPhoto}
+              alt="photo"
+            />
+            <p className={style.text}>Мы приглашаем вас разделить с нами этот
+              особенный день</p>
           </div>
           <img
             src={thirdPhoto}
-            alt=""
+            alt="photo"
           />
           <h2 className={style.date}>10 · 05 ·2026</h2>
         </div>

@@ -1,4 +1,4 @@
-import style from '@/pages/home/main/sections/timer/Timer.module.scss';
+import style from './Timer.module.scss';
 import {useEffect, useState} from 'react';
 import {
   calculateDiff

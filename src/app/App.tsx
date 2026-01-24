@@ -1,6 +1,6 @@
-import {Header} from '@/pages/home/header/Header.tsx';
+import {Header} from '@/widgets/header/Header.tsx';
 import {Main} from '@/pages/home/main/Main.tsx';
-import {Footer} from '@/pages/home/footer/Footer.tsx';
+import {Footer} from '@/widgets/footer/Footer.tsx';
 
 function App() {
 

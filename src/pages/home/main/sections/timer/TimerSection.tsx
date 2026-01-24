@@ -1,12 +1,14 @@
-import style from './Timer.module.scss'
+import style from './TimerSection.module.scss'
 import {Timer} from '@/pages/home/main/sections/timer/Timer/Timer.tsx';
 
 export const TimerSection = () => {
   return (
     <section className={style.section}>
-      <div className={style.content}>
-        <h3 className={style.title}>Обратный отсчет</h3>
-        <Timer date={new Date('2026-05-10T16:00:00Z')} />
+      <div className={style.container}>
+        <div className={style.content}>
+          <h2 className={style.title}>Обратный отсчет</h2>
+          <Timer date={new Date('2026-05-10T16:00:00Z')} />
+        </div>
       </div>
     </section>
   );

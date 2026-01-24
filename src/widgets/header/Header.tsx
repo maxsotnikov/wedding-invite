@@ -1,9 +1,8 @@
-import s from './Header.module.scss'
+import style from './Header.module.scss'
 import {Nav, type NavItemProps} from './navigation/Nav.tsx';
 
 const leftNav: NavItemProps[] = [
   {title: 'Информация', link: '/'},
-  // {title: 'Проезд и проживание', link: '/'},
   {title: 'Наша история', link: '/'},
 ]
 const rightNav: NavItemProps[] = [
@@ -13,16 +12,12 @@ const rightNav: NavItemProps[] = [
 
 export const Header = () => {
   return (
-    <header className={s.header}>
-      <div className={s.container}>
-        <Nav items={leftNav} className={s.navLeft}/>
-        <h1 className={s.title}>Максим & Инна</h1>
-        <Nav
-          items={rightNav}
-          className={s.navRight}
-        />
+    <header className={style.header}>
+      <div className={style.container}>
+        <Nav items={leftNav} className={style.navLeft}/>
+        <a href={'/'} className={style.title}>Максим & Инна</a>
+        <Nav items={rightNav} className={style.navRight} />
       </div>
-
     </header>
   );
 };

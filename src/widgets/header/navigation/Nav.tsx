@@ -1,4 +1,4 @@
-import s from './Nav.module.scss'
+import style from './Nav.module.scss'
 
 export type NavItemProps = {
   title: string;
@@ -14,12 +14,12 @@ type NavProps = {
 export const Nav = ({items, className}: NavProps) => {
   return (
     <nav className={className}>
-      <ul className={s.list}>
+      <ul className={style.list}>
         {items.map((item) => (
           <li key={item.link}>
             <a
               href={item.link}
-              className={s.link + (item.isButton ? ` ${s.button}` : '')}
+              className={item.isButton ? ` ${style.button}` : ''}
             >
               {item.title}
             </a>

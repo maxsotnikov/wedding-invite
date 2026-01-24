@@ -1,4 +1,4 @@
-@import '@/styles/globalStyles';
+@use '@/styles/globalStyles' as *;
 
 .container {
   @extend %container;
@@ -22,11 +22,17 @@
 .mainPhotoWrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: clamp(30px, 1vw, 4vw);
 
   img {
     aspect-ratio: 3 / 4;
   }
+}
+
+.text {
+  font-weight: 400;
+  text-align: center;
+  font-size: clamp(15px, 2vw, 22px);
 }
 
 .date {
@@ -35,21 +41,13 @@
   top: 25%;
   left: 50%;
 
-  font-family: 'Cormorant SC', sans-serif;
   font-weight: 600;
   font-size: clamp(30px, 10vw, 150px);
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
-.text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  text-align: center;
-  font-size: clamp(15px, 2vw, 22px);
-  white-space: break-spaces;
 
-}
 
 
 

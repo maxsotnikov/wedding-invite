@@ -13,14 +13,23 @@ body {
   min-width: 375px;
   background-color: $secondaryColor;
   color: $primaryColor;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 section {
   padding: 8vw 0;
 }
 
+h2, h3 {
+  font-family: 'Cormorant SC', sans-serif;
+  font-weight: 500;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul, li {
@@ -28,13 +37,25 @@ ul, li {
 }
 
 button {
+  padding: (clamp(8px, 1vw, 16px) clamp(12px, 1vw, 24px));
+  border: 1px solid black;
+  background-color: $primaryColor;
+  transition: opacity 0.1s linear;
   cursor: pointer;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: clamp(10px, 1vw, 15px);
+  color: $secondaryColor;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 %container {
   max-width: 1440px;
   width: 100%;
-//  padding: 0 15px;
   padding-inline: clamp(15px, 1vw, 50px);
   margin: 0 auto;
 //  border: 2px solid red;

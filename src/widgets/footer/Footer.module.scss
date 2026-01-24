@@ -1,0 +1,10 @@
+@use '@/styles/variables' as *;
+
+.footer {
+  padding: 2vw;
+  background-color: $primaryColor;
+  text-align: center;
+
+  font-size:clamp(0.8rem, 1vw, 2rem);
+  color: $secondaryColor;
+}
