@@ -1,0 +1,13 @@
+@use "@/styles/globalStyles" as *;
+@use '@/styles/mixins' as *;
+
+.menu {
+  display: none;
+  position: relative;
+
+  @include media(tablet) {
+    display: block;
+    justify-self: end;
+  }
+}
+

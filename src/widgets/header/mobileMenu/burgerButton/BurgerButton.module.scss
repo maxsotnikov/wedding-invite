@@ -3,9 +3,15 @@
 .button {
   width: 30px;
   height: 30px;
-  position: relative;
+//  position: relative;
   background-color: transparent;
   border: none;
+//  z-index: 100001;
+
+  position: fixed; // Кнопка всегда на месте
+  top: 1.8vw;      // Тот же отступ, что и у хедера
+  right: 20px;
+  z-index: 100003; // Самый верхний слой
 
   .line {
     position: absolute;
@@ -16,11 +22,12 @@
     background-color: $primaryColor;
     transition: transform 0.3s ease;
 
+    //horizontal line
     &:first-child {
       transform: rotate(0deg);
     }
 
-    // Вертикальная линия
+    //vertical line
     &:last-child {
       transform: rotate(90deg);
     }

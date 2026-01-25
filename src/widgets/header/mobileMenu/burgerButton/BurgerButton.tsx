@@ -3,14 +3,13 @@ import style from './BurgerButton.module.scss'
 type Props = {
   isOpen: boolean
   onClick: () => void
-  className: string
 }
 
-export const BurgerButton = ({isOpen, onClick, className}: Props) => {
+export const BurgerButton = ({isOpen, onClick}: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`${style.button} ${className} ${isOpen ? style.open : ''}`}
+      className={`${style.button} ${isOpen ? style.open : ''}`}
     >
       <span className={style.line}></span>
       <span className={style.line}></span>

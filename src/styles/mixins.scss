@@ -4,8 +4,8 @@
   @if $media == tablet {
     @media (max-width: $tablet) { @content; }
   }
-  @else if $media == m {
-    @media (max-width: $m) { @content; }
+  @else if $media == smallTablet {
+    @media (max-width: $smallTablet) { @content; }
   }
   @else if $media == l {
     @media (max-width: $l) { @content; }

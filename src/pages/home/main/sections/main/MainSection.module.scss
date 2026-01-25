@@ -1,4 +1,5 @@
 @use '@/styles/globalStyles' as *;
+@use '@/styles/mixins' as *;
 
 .container {
   @extend %container;
@@ -13,7 +14,7 @@
   justify-items: center;
 
   img {
-    width: 100%;
+    width: 100%; //почему если уберу то будет большая ширина
     aspect-ratio: 2 / 3;
     object-fit: cover;
   }
@@ -47,17 +48,42 @@
   white-space: nowrap;
 }
 
-
-
-
-
-@media (max-width: 768px) {
+@include media(smallTablet) {
   .content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+
+    grid-template-areas:
+      "main main"
+      "text text"
+      "photo1 photo2";
   }
 
-  img {
+  .mainPhotoWrapper {
+    grid-area: main;
+    width: 100%;
+    max-width: 70%;
+  }
+
+  .text {
+    grid-area: text;
+  }
+
+  .sidePhoto {
+    width: 100%;
     aspect-ratio: 3 / 4;
+  }
+
+  .sidePhoto:first-of-type {
+    grid-area: photo1;
+  }
+
+  .sidePhoto:last-of-type {
+    grid-area: photo2;
+  }
+
+  .date {
+    top: 10%;
   }
 }
 
