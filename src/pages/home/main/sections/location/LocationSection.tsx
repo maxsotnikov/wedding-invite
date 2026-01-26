@@ -13,7 +13,7 @@ export const LocationSection = () => {
               href={'/'}
               className={style.link}
             >
-              Усадьба Марьянино
+              Усадьба <br className={style.desktopBreak}/> Марьянино
             </a>
             <div className={style.wrapper}>
               <h2 className={style.title}>Локация</h2>

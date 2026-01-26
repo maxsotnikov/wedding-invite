@@ -7,8 +7,8 @@
   @else if $media == smallTablet {
     @media (max-width: $smallTablet) { @content; }
   }
-  @else if $media == l {
-    @media (max-width: $l) { @content; }
+  @else if $media == mobile {
+    @media (max-width: $mobile) { @content; }
   }
   @else if $media == xl {
     @media (max-width: $xl) { @content; }

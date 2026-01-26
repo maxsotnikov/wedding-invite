@@ -1,8 +1,8 @@
 @use '@/styles/variables' as *;
 @use '@/styles/globalStyles' as *;
 
-.section {
-  min-height: 120vh;
+.timerSection {
+  min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;

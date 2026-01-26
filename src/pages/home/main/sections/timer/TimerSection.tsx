@@ -3,7 +3,7 @@ import {Timer} from '@/pages/home/main/sections/timer/Timer/Timer.tsx';
 
 export const TimerSection = () => {
   return (
-    <section className={style.section}>
+    <section className={style.timerSection}>
       <div className={style.container}>
         <div className={style.content}>
           <h2 className={style.title}>Обратный отсчет</h2>

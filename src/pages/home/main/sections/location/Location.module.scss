@@ -1,5 +1,6 @@
 @use '@/styles/variables' as *;
 @use '@/styles/globalStyles' as *;
+@use '@/styles/mixins' as *;
 
 .container {
   @extend %container;
@@ -12,14 +13,14 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: clamp(50px, 1vw, 2vw);
   align-items: center;
+  margin-top: clamp(20px, 1.5vw, 50px);
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  max-width: 25vw;
+  max-width: 30vw;
   margin: 0 auto;
 
   img {
@@ -44,6 +45,57 @@
 .link {
   font-size: clamp(0.8rem, 1.4vw, 1.8rem);
   text-decoration: underline black;
-  text-underline-offset: clamp(5px, 0.3vw, 1rem);
-  line-height: clamp(1rem, 3vw, 2rem);
+  text-underline-offset: clamp(5px, 0.3vw, 16px);
+  line-height: clamp(20px, 2vw, 3rem);
+}
+
+.desktopBreak {
+  display: block;
+}
+
+@include media(smallTablet) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 2vw, 6vw);
+
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 1vw, 2vw);
+  }
+
+  .link:first-of-type {
+    order: 1;
+  }
+
+  .link:last-of-type {
+    order: 2;
+  }
+  .wrapper {
+    max-width: 50vw;
+
+    img {
+      margin-bottom: clamp(10px, 2vw, 5vw);
+    }
+  }
+
+  .desktopBreak{
+    display: none;
+  }
+
+}
+
+@include media(mobile) {
+  .wrapper {
+    max-width: 60vw;
+
+    img {
+      margin-bottom: clamp(10px, 2vw, 5vw);
+    }
+  }
+
 }
