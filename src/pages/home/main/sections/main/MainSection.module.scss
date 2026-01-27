@@ -1,5 +1,6 @@
 @use '@/styles/globalStyles' as *;
 @use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
 
 .container {
   @extend %container;
@@ -33,45 +34,43 @@
 .text {
   font-weight: 400;
   text-align: center;
-  font-size: clamp(15px, 2vw, 22px);
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .date {
   position: absolute;
-  z-index: 1;
   top: 25%;
   left: 50%;
-
-  font-weight: 600;
-  font-size: clamp(30px, 10vw, 150px);
+  font-family: $numberFontFamily;
+  font-size: clamp(60px, 10vw, 150px);
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  z-index: 1;
 }
 
 @include media(smallTablet) {
   .content {
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
-
+    gap: 0;
     grid-template-areas:
       "main main"
-      "text text"
       "photo1 photo2";
   }
 
   .mainPhotoWrapper {
-    grid-area: main;
     width: 100%;
-    max-width: 70%;
+    max-width: 60vw;
+    grid-area: main;
+    gap: 0;
   }
 
   .text {
-    grid-area: text;
+    padding: 4vh 0;
   }
 
   .sidePhoto {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    max-width: 30vw;
   }
 
   .sidePhoto:first-of-type {
@@ -84,6 +83,6 @@
 
   .date {
     top: 10%;
+    font-size: clamp(60px, 15vw, 150px);
   }
 }
-

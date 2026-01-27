@@ -3,6 +3,7 @@
 @use '@/styles/mixins' as *;
 
 .scheduleSection {
+  position: relative;
   min-height: 90vh;
   display: flex;
   justify-content: center;
@@ -12,14 +13,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  position: relative;
-
   &::before {
+    position: absolute;
+    content: '';
     width: 100%;
     height: 100%;
     background-color: rgba(18, 16, 16, 0.84);
-    content: '';
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 1; // поверх фона, но под контентом
@@ -28,29 +27,23 @@
 
 .container {
   @extend %container;
-  margin: auto;
 }
 
 .content {
-  text-align: center;
-  color: $secondaryColor;
-  position: relative; // важно
-  z-index: 2;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: clamp(1vw, 4vw, 5vw);
-}
-
-.title {
-  font-size: clamp(30px, 6vw, 120px);
+  text-align: center;
+  color: $secondaryColor;
+  z-index: 2;
 }
 
 .schedule {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(50px, 1vw, 2vw);
-  width: 100%;
 
   div {
     display: flex;
@@ -58,25 +51,31 @@
     gap: clamp(20px, 1vw, 5vw);
 
     & > span:first-child {
-      font-family: 'Cormorant SC', sans-serif;
-      font-size: clamp(1rem, 4vw, 6rem);
+      font-family: $numberFontFamily;
+      font-size: clamp(1rem, 4vw, 5rem);
     }
-
-    & > span:last-child {
-      font-size: clamp(0.8rem, 1.3vw, 1.6rem);
-    }
-  }
-}
-
-@include media(tablet) {
-  .scheduleSection{
-    min-height: 60vh;
   }
 }
 
 @include media(smallTablet) {
-  .schedule{
+  .content {
+    gap: 5vh;
+  }
+
+  .schedule {
     display: flex;
     flex-direction: column;
+
+    div {
+      gap: clamp(10px, 1vw, 5vw);
+
+      & > span:first-child {
+        font-size: clamp(1rem, 10vw, 6rem);
+      }
+    }
+  }
+
+  .title {
+    font-size: $mobileTitleFontSize
   }
 }

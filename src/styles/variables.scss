@@ -1,9 +1,20 @@
-//--------------colors-------------
-$primaryColor: hsla(40, 15%, 7.84%, 1);
-$secondaryColor: hsla(40,17.65%,96.67%,1);
-
 //------------breakpoints----------
 $mobile: 480px;
 $smallTablet: 768px;
 $tablet: 1024px;
 $laptops : 1280px;
+
+//--------------colors-------------
+$primaryColor: hsla(40, 15%, 7.84%, 1);
+$secondaryColor: hsla(40,17.65%,96.67%,1);
+
+//--------------font-family--------------
+$mainFontFamily: 'Cormorant SC', Times, serif;
+$secondaryFontFamily: 'Montserrat', sans-serif;
+$numberFontFamily: 'Times New Roman', Times, serif;
+
+//--------------font-size--------------
+$titleFontSize: clamp(2rem, 6vw, 7.5rem);
+$mobileTitleFontSize: clamp(2rem, 10vw, 7.5rem);
+
+$basicFontSize: clamp(1rem, 1vw, 2rem);

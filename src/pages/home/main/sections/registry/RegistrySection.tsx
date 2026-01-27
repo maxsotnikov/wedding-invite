@@ -11,7 +11,6 @@ export const RegistrySection = () => {
     <section>
       <div className={style.container}>
         <div className={style.content}>
-
           {/* Левая колонка */}
           <Column
             title={'Регистрация'}
@@ -20,7 +19,6 @@ export const RegistrySection = () => {
             src={registryPhoto}
             description={'Хотя ваше присутствие на нашей свадьбе является величайшим подарком, если вы хотите разделить нашу радость через подарок, пожалуйста, посетите наш реестр.'}
           />
-
           {/* Правая колонка */}
           <Column
             title={'Дресс-код'}
@@ -29,7 +27,6 @@ export const RegistrySection = () => {
             src={dressCodePhoto}
             description={'Для этого грандиозного празднования любви, мы любезно просим вас принять элегантность случая, одевшись в формальный костюм.'}
           />
-
         </div>
       </div>
     </section>

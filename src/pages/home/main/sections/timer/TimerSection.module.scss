@@ -1,5 +1,6 @@
 @use '@/styles/variables' as *;
 @use '@/styles/globalStyles' as *;
+@use '@/styles/mixins' as *;
 
 .timerSection {
   min-height: 90vh;
@@ -39,5 +40,19 @@
 }
 
 .title {
-  font-size: clamp(10px, 8vw, 60px);
+  font-size: clamp(30px, 4vw, 120px);
+
+  text-align: center;
+}
+
+@include media(tablet) {
+  .timerSection {
+    min-height: 50vh;
+  }
+}
+
+@include media(smallTablet) {
+  .content {
+    gap: 5vh;
+  }
 }

@@ -1,6 +1,6 @@
 import style from './Location.module.scss'
 import location
-  from '@/assets/images/alejandro-luengo-Fm_TvVmuHq4-unsplash+(1).webp'
+  from '@/assets/images/XXXL (1) (1).webp'
 import {Button} from '@/shared/Button.tsx';
 
 export const LocationSection = () => {

@@ -11,42 +11,39 @@
 }
 
 .main {
+  margin-top: clamp(20px, 1.5vw, 50px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  margin-top: clamp(20px, 1.5vw, 50px);
+}
+
+.link {
+  font-size: clamp(1rem, 1.4vw, 2rem);
+  text-underline-offset: clamp(5px, 0.3vw, 16px);
+  line-height: clamp(2rem, 2vw, 4rem);
+  text-decoration: underline black;
 }
 
 .wrapper {
   position: relative;
-  width: 100%;
-  max-width: 30vw;
   margin: 0 auto;
 
   img {
     margin-bottom: clamp(50px, 2vw, 5vw);
     width: 100%;
     aspect-ratio: 3 / 4;
+    object-position: 80% 50%;
     object-fit: cover;
     display: block;
   }
 }
 
 .title {
-  font-size:clamp(30px, 5vw, 90px);
-
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%); // наполовину наружу картинки
   z-index: 2;
-}
-
-.link {
-  font-size: clamp(0.8rem, 1.4vw, 1.8rem);
-  text-decoration: underline black;
-  text-underline-offset: clamp(5px, 0.3vw, 16px);
-  line-height: clamp(20px, 2vw, 3rem);
 }
 
 .desktopBreak {
@@ -59,37 +56,27 @@
     flex-direction: column;
     align-items: center;
     gap: clamp(20px, 2vw, 6vw);
-
   }
 
   .main {
     display: flex;
     flex-direction: column;
-    gap: clamp(10px, 1vw, 2vw);
+    gap: clamp(20px, 4vw, 5vw);
+  }
+
+  .title {
+    font-size: $mobileTitleFontSize
   }
 
   .link:first-of-type {
     order: 1;
+    margin-top: 2vh;
   }
 
   .link:last-of-type {
     order: 2;
+    margin-bottom: 2vh;
   }
-  .wrapper {
-    max-width: 50vw;
-
-    img {
-      margin-bottom: clamp(10px, 2vw, 5vw);
-    }
-  }
-
-  .desktopBreak{
-    display: none;
-  }
-
-}
-
-@include media(mobile) {
   .wrapper {
     max-width: 60vw;
 
@@ -98,4 +85,7 @@
     }
   }
 
+  .desktopBreak {
+    display: none;
+  }
 }
