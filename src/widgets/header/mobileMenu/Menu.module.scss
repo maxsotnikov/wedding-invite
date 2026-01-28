@@ -1,35 +1,55 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
 .menu {
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 
   position: fixed;
   inset: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 999999;
 
-  background-color: white; // Или ваш $secondaryColor
-  padding: 20px;
+  background-color: $secondaryColor;
+  padding: 1.5vw 0;
 
   overflow-y: auto;
 
   opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity .3s ease, transform .3s ease, visibility .3s;
+//  visibility: hidden;
+//  transform: translateY(-10px);
+  transition: opacity .5s ease;
 
   &.isOpen {
     opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+//    visibility: visible;
+//    transform: translateY(0);
+    touch-action: none;
   }
+}
 
+.mobileNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include media(tablet) {
   .mobileNav {
     ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      gap: clamp(2em, 1vw, 2vw);
     }
   }
 }

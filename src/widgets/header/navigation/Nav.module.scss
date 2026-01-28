@@ -1,4 +1,5 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .list {
   display: flex;
@@ -13,5 +14,11 @@
     background-color: $primaryColor;
     color: $secondaryColor;
     transition: .1s background-color linear,.1s color linear;
+  }
+}
+
+@include media(tablet) {
+  .button {
+    padding: clamp(1em, 1vw, 2em ) clamp(2em, 1vw, 2em );
   }
 }

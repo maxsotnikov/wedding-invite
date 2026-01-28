@@ -1,4 +1,5 @@
 @use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
 
 .column {
   width: 100%;
@@ -11,11 +12,15 @@
 .wrapper {
   position: relative;
   width: 100%;
-  max-width: 30vw; // Фиксируем ширину картинки для стабильности
+  max-width: 30vw;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   img {
     width: 100%;
+//    max-width: 80%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     display: block;
@@ -28,7 +33,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
-  font-size:clamp(30px, 5vw, 90px);
   white-space: nowrap;
   z-index: 2;
 }
@@ -36,7 +40,6 @@
 .description {
   width: 100%;
   margin-top: clamp(20px, 1vw, 2vw);
-  font-size: clamp(1rem, 1vw, 2rem);
   line-height: 1.6;
 }
 
@@ -50,6 +53,6 @@
   }
 
   .title {
-    font-size: clamp(30px, 10vw, 120px);
+    font-size: $mobileTitleFontSize;
   }
 }

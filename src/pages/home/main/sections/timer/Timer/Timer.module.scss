@@ -1,13 +1,10 @@
 @use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
 
 .timer {
-
   display: flex;
-//  justify-content: center;
   width: 100%;
   max-width: 60vw;
-//  column-gap: clamp(70px, 2vw, 200px);
-
 
   div {
     margin: 0 auto;
@@ -18,15 +15,8 @@
     gap: clamp(20px, 1vw, 5vw);
 
     & > span:first-child {
-//      font-family: 'Cormorant SC', sans-serif;
-      font-family: 'Times New Roman', sans-serif;
-      font-size: clamp(1rem, 10vw, 130px);
-
-//      font-variant-numeric: tabular-nums;
-    }
-
-    & > span:last-child {
-      font-size: clamp(1rem, 1vw, 2rem);
+      font-family: $numberFontFamily;
+      font-size: clamp(1rem, 10vw, 8rem);
     }
   }
 }
@@ -39,16 +29,8 @@
 
     div {
       gap: 0;
-    }
-  }
-}
-
-@include media(mobile) {
-  .timer {
-    div {
       & > span:first-child {
-        font-size: clamp(1rem, 18vw, 150px);
-        //        font-size: clamp(60px, 18vw, 150px);
+        font-size: clamp(1rem, 20vw, 5rem);
       }
     }
   }

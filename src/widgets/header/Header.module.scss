@@ -1,11 +1,11 @@
 @use "@/styles/globalStyles" as *;
 @use '@/assets/fonts/fonts' as *;
 @use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
 
 .header {
   padding: 1.4vw 0;
-
-  font-size: clamp(12px, 1vw, 18px);
+  font-size: clamp(0.75rem, 1vw, 1.125rem);
 }
 
 .container {
@@ -28,17 +28,21 @@
 
 .title {
   position: relative;
-  z-index: 100002; // Выше, чем у открытого меню
   justify-self: center;
   grid-column: 2;
-
-  font-family: 'Cormorant SC', sans-serif;
-  font-size: clamp(30px, 3vw, 60px);
+  font-family: $mainFontFamily;
   font-weight: 600;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+@include media(tablet) {
+  .header {
+    font-size: clamp(1.5rem, 1vw, 3rem);
+  }
 }
 
 @include media(mobile) {
   .title {
-    font-size: clamp(25px, 6vw, 60px);
+    font-size: clamp(1rem, 6vw, 3rem);
   }
 }

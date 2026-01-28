@@ -16,7 +16,7 @@ const menuItems = [
 export const Menu = ({isOpen}:Props) => {
   return (
     <div className={`${style.menu} ${isOpen ? style.isOpen : ''}`} >
-      {/*<a href={'/'} className={s.title}>Максим & Инна</a>*/}
+      <a href={'/'} className={s.title}>Максим & Инна</a>
       <Nav items={menuItems} className={style.mobileNav}/>
     </div>
   );

@@ -21,6 +21,11 @@
   }
 }
 
+.sidePhoto {
+  align-self: center;
+  margin-bottom: clamp(3vw, 5vw, 10vw);
+}
+
 .mainPhotoWrapper {
   display: flex;
   flex-direction: column;
@@ -42,7 +47,7 @@
   top: 25%;
   left: 50%;
   font-family: $numberFontFamily;
-  font-size: clamp(60px, 10vw, 150px);
+  font-size: clamp(3.75rem, 10vw, 9.375rem);
   transform: translate(-50%, -50%);
   white-space: nowrap;
   z-index: 1;
@@ -83,6 +88,6 @@
 
   .date {
     top: 10%;
-    font-size: clamp(60px, 15vw, 150px);
+    font-size: clamp(3.75rem, 15vw, 9.375rem);
   }
 }

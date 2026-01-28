@@ -14,7 +14,10 @@ $secondaryFontFamily: 'Montserrat', sans-serif;
 $numberFontFamily: 'Times New Roman', Times, serif;
 
 //--------------font-size--------------
-$titleFontSize: clamp(2rem, 6vw, 7.5rem);
-$mobileTitleFontSize: clamp(2rem, 10vw, 7.5rem);
+$titleFontSize: clamp(2rem, 5vw, 6rem);
+$mobileTitleFontSize: clamp(2rem, 10vw, 6rem);
 
-$basicFontSize: clamp(1rem, 1vw, 2rem);
+$basicFontSize: clamp(1rem, 1vw, 1.5rem);
+
+//--------------gap--------------
+$titleGap: clamp(1vw, 4vw, 5vw);

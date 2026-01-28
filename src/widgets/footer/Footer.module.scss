@@ -3,8 +3,10 @@
 .footer {
   padding: 2vw;
   background-color: $primaryColor;
-  text-align: center;
+}
 
-  font-size:clamp(1rem, 1vw, 2rem);
+.text {
+  font-size: $basicFontSize;
   color: $secondaryColor;
+  text-align: center;
 }

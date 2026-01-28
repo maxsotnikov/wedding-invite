@@ -15,7 +15,7 @@ export const Timer = ({date}: Props) => {
   const finishTime = date.getTime()
 
   const [diff, setDiff] = useState<Array<number>>(() => calculateDiff(finishTime));
-const [days, hours, minutes, seconds] = diff
+  const [days, hours, minutes, seconds] = diff
 
   useEffect(() => {
     const intervalId = setInterval(() => {

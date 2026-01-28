@@ -1,24 +1,21 @@
 @use '@/styles/variables' as *;
 
 .button {
+  position: fixed; // Кнопка всегда на месте
+  top: 1.8vw;
+  right: 20px;
   width: 30px;
   height: 30px;
-//  position: relative;
   background-color: transparent;
   border: none;
-//  z-index: 100001;
-
-  position: fixed; // Кнопка всегда на месте
-  top: 1.8vw;      // Тот же отступ, что и у хедера
-  right: 20px;
-  z-index: 100003; // Самый верхний слой
+  z-index: 1000003; // Самый верхний слой
 
   .line {
     position: absolute;
-    width: 30px;
-    height: 1px;
     top: 50%;
     right: 0;
+    width: 30px;
+    height: 1px;
     background-color: $primaryColor;
     transition: transform 0.3s ease;
 
@@ -26,7 +23,6 @@
     &:first-child {
       transform: rotate(0deg);
     }
-
     //vertical line
     &:last-child {
       transform: rotate(90deg);

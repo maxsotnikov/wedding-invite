@@ -18,19 +18,23 @@
 }
 
 .link {
-  font-size: clamp(1rem, 1.4vw, 2rem);
-  text-underline-offset: clamp(5px, 0.3vw, 16px);
-  line-height: clamp(2rem, 2vw, 4rem);
+  text-underline-offset: clamp(0.315rem, 0.3vw, 1rem);
+  line-height: clamp(2rem, 1.5vw, 4rem);
   text-decoration: underline black;
 }
 
 .wrapper {
   position: relative;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   img {
     margin-bottom: clamp(50px, 2vw, 5vw);
     width: 100%;
+//    max-width: 80%;
+
     aspect-ratio: 3 / 4;
     object-position: 80% 50%;
     object-fit: cover;

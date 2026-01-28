@@ -33,7 +33,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: clamp(1vw, 4vw, 5vw);
+  gap: $titleGap;
   text-align: center;
   color: $secondaryColor;
   z-index: 2;
@@ -58,6 +58,10 @@
 }
 
 @include media(smallTablet) {
+  .scheduleSection {
+    min-height: 100vh;
+  }
+
   .content {
     gap: 5vh;
   }
@@ -70,7 +74,7 @@
       gap: clamp(10px, 1vw, 5vw);
 
       & > span:first-child {
-        font-size: clamp(1rem, 10vw, 6rem);
+        font-size: clamp(1rem, 10vw, 5rem);
       }
     }
   }
