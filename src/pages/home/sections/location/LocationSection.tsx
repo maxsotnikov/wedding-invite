@@ -1,7 +1,7 @@
 import style from './Location.module.scss'
 import location
   from '@/assets/images/XXXL (1) (1).webp'
-import {Button} from '@/shared/Button.tsx';
+import {Button} from '@/shared/button/Button.tsx';
 
 export const LocationSection = () => {
   return (

@@ -20,7 +20,7 @@ body {
 
 section {
   padding: 8vh 0;
-  border: 2px solid blue;
+//  border: 2px solid blue;
 }
 
 h2, h3 {
@@ -39,20 +39,7 @@ ul, li {
 }
 
 button {
-  padding: clamp(16px, 1vw, 32px);
-  border: 1px solid black;
-  background-color: $primaryColor;
-  transition: opacity 0.1s linear;
   cursor: pointer;
-
-  font-family: inherit;
-  font-weight: 400;
-  font-size: clamp(16px, 1vw, 32px);
-  color: $secondaryColor;
-
-  &:hover {
-    opacity: 0.9;
-  }
 }
 
 %container {
@@ -60,5 +47,5 @@ button {
   width: 100%;
   padding-inline: clamp(15px, 1vw, 50px);
   margin: 0 auto;
-  border: 2px solid red;
+//  border: 2px solid red;
 }

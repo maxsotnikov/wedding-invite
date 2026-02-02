@@ -1,0 +1,39 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  padding: clamp(16px, 1vw, 32px);
+  border: 1px solid $primaryColor;
+  transition: opacity 0.1s linear;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: $basicFontSize;
+}
+
+.primary {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.secondary {
+  padding: clamp(8px, 1vw, 16px ) clamp(12px, 1vw, 24px );
+  background-color: transparent;
+  color: $primaryColor;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    transition: .1s background-color linear,.1s color linear;
+  }
+}
+
+@include media(tablet) {
+  .secondary {
+    padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
+  }
+}

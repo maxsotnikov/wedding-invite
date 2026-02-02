@@ -1,28 +1,32 @@
 import style from './Nav.module.scss'
+import {Button} from '@/shared/button/Button.tsx';
+import type {NavItem} from '@/features/nav/types.ts';
 
-export type NavItemProps = {
-  title: string;
-  link: string;
-  isButton?: boolean;
-}
+type Props = {
+  items: NavItem[];
+  className: string;
+  onAction?: (action: NavItem['action']) => void;
+};
 
-type NavProps = {
-  items: NavItemProps[];
-  className?: string;
-}
-
-export const Nav = ({items, className}: NavProps) => {
+export const Nav = ({items, onAction, className}: Props) => {
   return (
     <nav className={className}>
       <ul className={style.list}>
         {items.map((item) => (
-          <li key={item.link}>
-            <a
-              href={item.link}
-              className={item.isButton ? ` ${style.button}` : ''}
-            >
-              {item.title}
-            </a>
+          <li key={item.id}>
+            {item.isButton ? (
+              <Button
+                title={item.title}
+                onClick={() => onAction && onAction(item.action)} //onAction?.(item.action) можно вот так записать
+                variant={'secondary'}
+              />
+            ) : (
+              <a
+                href={item.link}
+              >
+                {item.title}
+              </a>
+            )}
           </li>
         ))}
       </ul>

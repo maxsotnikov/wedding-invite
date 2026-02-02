@@ -2,10 +2,10 @@ import style from './Timer.module.scss';
 import {useEffect, useState} from 'react';
 import {
   calculateDiff
-} from '@/pages/home/main/sections/timer/Timer/features/calculateDIff.ts';
+} from './features/calculateDIff.ts';
 import {
   pluralize
-} from '@/pages/home/main/sections/timer/Timer/features/pluralize.ts';
+} from './features/pluralize.ts';
 
 type Props = {
   date: Date

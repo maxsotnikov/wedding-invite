@@ -1,6 +1,6 @@
-import {BurgerButton} from '@/widgets/header/mobileMenu/burgerButton/BurgerButton.tsx';
+import {BurgerButton} from './burgerButton/BurgerButton.tsx';
 import {useEffect, useState} from 'react';
-import {Menu} from '@/widgets/header/mobileMenu/Menu.tsx';
+import {Menu} from './menu/Menu.tsx';
 import style from './MobileMenu.module.scss'
 
 export const MobileMenu = () => {

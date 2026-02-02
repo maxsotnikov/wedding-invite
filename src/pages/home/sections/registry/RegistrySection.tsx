@@ -1,9 +1,7 @@
-import registryPhoto
-  from '../../../../../assets/images/karolina-grabowska-yH50AWO8ZRo-unsplash.webp'
-import dressCodePhoto
-  from '../../../../../assets/images/karolina-grabowska-p2gsaMgCsMg-unsplash.webp'
+import registryPhoto from '@/assets/images/karolina-grabowska-yH50AWO8ZRo-unsplash.webp'
+import dressCodePhoto from '@/assets/images/karolina-grabowska-p2gsaMgCsMg-unsplash.webp'
 import style from './RegistrySection.module.scss'
-import {Column} from '@/pages/home/main/sections/registry/column/Column.tsx';
+import {Column} from './column/Column.tsx';
 
 
 export const RegistrySection = () => {

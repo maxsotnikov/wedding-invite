@@ -1,5 +1,5 @@
 import style from './TimerSection.module.scss'
-import {Timer} from '@/pages/home/main/sections/timer/Timer/Timer.tsx';
+import {Timer} from './Timer/Timer.tsx';
 
 export const TimerSection = () => {
   return (

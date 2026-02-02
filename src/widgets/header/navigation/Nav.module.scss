@@ -3,22 +3,23 @@
 
 .list {
   display: flex;
+  align-items: center;
   gap: clamp(20px, 1vw, 2vw);
 }
 
-.button {
-  padding: clamp(8px, 1vw, 16px ) clamp(12px, 1vw, 24px );
-  border: 1px solid $primaryColor;
-
-  &:hover {
-    background-color: $primaryColor;
-    color: $secondaryColor;
-    transition: .1s background-color linear,.1s color linear;
-  }
-}
-
-@include media(tablet) {
-  .button {
-    padding: clamp(1em, 1vw, 2em ) clamp(2em, 1vw, 2em );
-  }
-}
+//.navButton {
+//  padding: clamp(8px, 1vw, 16px ) clamp(12px, 1vw, 24px );
+//  border: 1px solid $primaryColor;
+//
+//  &:hover {
+//    background-color: $primaryColor;
+//    color: $secondaryColor;
+//    transition: .1s background-color linear,.1s color linear;
+//  }
+//}
+//
+//@include media(tablet) {
+//  .button {
+//    padding: clamp(1em, 1vw, 2em ) clamp(2em, 1vw, 2em );
+//  }
+//}

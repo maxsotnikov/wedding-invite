@@ -1,5 +1,5 @@
 import style from './Column.module.scss';
-import {Button} from '@/shared/Button.tsx';
+import {Button} from '@/shared/button/Button.tsx';
 
 type Props = {
   title: string;
