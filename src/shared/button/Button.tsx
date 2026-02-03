@@ -5,17 +5,20 @@ type Props = {
   className?: string
   onClick?: () => void
   variant?: 'primary' | 'secondary';
+  type?: 'submit'
 }
 
 export const Button = ({
                          title,
                          className,
                          onClick,
-                         variant = 'primary'
+                         variant = 'primary',
+                         type,
                        }: Props) => {
   return <button
     onClick={onClick}
     className={`${style.button} ${style[variant]} ${className ?? ''}`}
     data-variant={variant}
+    type={type}
   >{title}</button>;
 };

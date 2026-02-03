@@ -8,7 +8,7 @@ export const initialState: NavState = {
     {id: 'info', title: 'Информация', link: '/', position: 'left'},
     {id: 'history', title: 'Наша история', link: '/', position: 'left'},
     {id: 'more', title: 'Подробнее', link: '/', position: 'right'},
-    {id: 'fill', title: 'Заполнить', isButton: true, position: 'right', action: 'openForm'},
+    {id: 'fill', title: 'Регистрация', isButton: true, position: 'right', action: 'openForm'},
   ]
 }
 

@@ -14,10 +14,8 @@ export const Header = () => {
 
   const handleNavAction = (action?: string) => {
     if (!action) return;
-    switch (action) {
-      case 'openForm':
-        setIsModalOpen(true);
-        break;
+    if (action === 'openForm') {
+      setIsModalOpen(true)
     }
   };
 

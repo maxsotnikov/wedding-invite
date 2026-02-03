@@ -17,6 +17,15 @@
   &:hover {
     opacity: 0.9;
   }
+
+  &:focus-visible {
+//    outline: 3px solid red;
+
+    box-shadow:
+      0 0 0 1px #000,
+      0 0 0 3px #fff,
+      0 0 0 5px #000;
+  }
 }
 
 .secondary {
@@ -24,6 +33,8 @@
   background-color: transparent;
   color: $primaryColor;
   font-weight: 500;
+  font-size: $navFontSize;
+
 
   &:hover {
     background-color: $primaryColor;
