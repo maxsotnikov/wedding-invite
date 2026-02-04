@@ -1,4 +1,4 @@
-export type NavPosition = 'left' | 'right' | 'mobile'
+export type NavPosition = 'left' | 'right'
 export type NavAction = 'openForm';
 
 export type NavItem = {

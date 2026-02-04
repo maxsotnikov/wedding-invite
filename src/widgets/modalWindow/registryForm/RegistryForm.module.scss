@@ -1,0 +1,16 @@
+@use '@/styles/variables' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.telegramInput {
+  text-transform: lowercase;
+}
+
+.button {
+  align-self: center;
+}
+

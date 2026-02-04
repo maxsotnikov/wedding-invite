@@ -2,9 +2,20 @@ import {BurgerButton} from './burgerButton/BurgerButton.tsx';
 import {useEffect, useState} from 'react';
 import {Menu} from './menu/Menu.tsx';
 import style from './MobileMenu.module.scss'
+import type {NavAction, NavItem} from '@/features/nav/types.ts';
 
-export const MobileMenu = () => {
+type Props = {
+  items: NavItem[];
+  onAction?: (action: NavItem['action']) => void;
+}
+
+export const MobileMenu = ({items, onAction}: Props) => {
   const[isOpen, setOpen] = useState(false);
+
+  const handleAction = (action?: NavAction) => {
+    onAction?.(action);
+    setOpen(false); // закрываем меню
+  };
 
   useEffect(() => {
     if(isOpen) {
@@ -21,9 +32,9 @@ export const MobileMenu = () => {
   }, [isOpen]);
 
   return (
-    <div className={style.menu}>
+    <div className={style.mobileMenu}>
       <BurgerButton isOpen={isOpen} onClick={() => setOpen(!isOpen)}/>
-      <Menu isOpen={isOpen} />
+      <Menu isOpen={isOpen} items={items} onAction={handleAction}/>
     </div>
   );
 };

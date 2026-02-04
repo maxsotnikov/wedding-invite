@@ -1,78 +1,35 @@
 @use '@/styles/variables' as *;
 
-
 .overlay {
   position: fixed;
-  inset: 0;
-  background: rgba($primaryColor, .9);
-  z-index: 100;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  inset: 0;
+  background: rgba($primaryColor, .9);
   pointer-events: none;
+  opacity: 0;
   visibility: hidden; //прячу чтобы их не видел TAB
   transition:
     opacity .5s ease,
     visibility .5s ease;
+  z-index: 100;
 
   &.isOpen {
-    opacity: 1;
     pointer-events: auto;
+    opacity: 1;
     visibility: visible; //делаю снова активными для TAB
   }
-
 }
 
 .modal {
   position: relative;
-  background: $secondaryColor;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: #787676;
-}
-
-input {
-  padding: 5px 0;
-  border: none;
-  border-bottom: 2px solid $primaryColor;
-  background-color: $secondaryColor;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  text-transform: none;
-
-  &::placeholder {
-    font-weight: 400;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    color: #787676;
-  }
-
-
-}
-
-.telegramInput {
-  text-transform: lowercase;
-}
-
-.button {
-  align-self: center;
+  background: $secondaryColor;
 }
 
 .closeButton {

@@ -21,6 +21,7 @@ export const Header = () => {
 
   const leftNav = navState.items.filter(i => i.position === 'left');
   const rightNav = navState.items.filter(i => i.position === 'right');
+  const mobileNav = navState.items;
 
   return (
     <>
@@ -39,7 +40,7 @@ export const Header = () => {
             className={style.navRight}
             onAction={handleNavAction}
           />
-          <MobileMenu />
+          <MobileMenu items={mobileNav} onAction={handleNavAction}/>
         </div>
       </header>
 
