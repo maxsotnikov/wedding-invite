@@ -46,5 +46,7 @@
 @include media(tablet) {
   .secondary {
     padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
+    font-size: clamp(1rem, 5vw, 2.5rem);
+
   }
 }

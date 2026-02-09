@@ -10,10 +10,4 @@
   @else if $media == mobile {
     @media (max-width: $mobile) { @content; }
   }
-  @else if $media == xl {
-    @media (max-width: $xl) { @content; }
-  }
-  @else if $media == xxl {
-    @media (max-width: $xxl) { @content; }
-  }
 }

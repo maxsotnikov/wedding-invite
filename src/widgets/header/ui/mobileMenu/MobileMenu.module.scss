@@ -5,6 +5,7 @@
   display: none;
   position: relative;
 
+
   @include media(tablet) {
     display: block;
     justify-self: end;

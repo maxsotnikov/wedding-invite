@@ -38,20 +38,6 @@ export const RegistryForm = ({onClose, isOpen}: Props) => {
   };
 
   useEffect(() => {
-    if (isOpen) {
-      // Блокируем скролл и убираем возможные скачки верстки из-за исчезновения полосы прокрутки
-      document.body.style.overflow = 'hidden';
-    } else {
-      // Возвращаем скролл
-      document.body.style.overflow = '';
-    }
-    // Чистим эффект при размонтировании компонента (на всякий случай)
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
     if (!isOpen) return;
 
     const onEsc = (e: KeyboardEvent) => {

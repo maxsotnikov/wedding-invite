@@ -1,5 +1,5 @@
 import style from './ModalWindow.module.scss';
-import {BurgerButton} from '@/widgets/header/ui/mobileMenu/burgerButton/BurgerButton.tsx';
+import {BurgerButton} from '@/shared/burgerButton/BurgerButton.tsx';
 import {RegistryForm} from './registryForm/RegistryForm.tsx';
 
 type Props = {
@@ -14,16 +14,17 @@ export const ModalWindow = ({isOpen, onClose}: Props) => {
         className={style.modal}
         onClick={e => e.stopPropagation()}
       >
-        <BurgerButton
+        <h2 className={style.title}>Регистрация</h2>
+        <div className={style.navWrapper}>
+          <BurgerButton
           isOpen={true}
           onClick={() => onClose()}
           className={style.closeButton}
         />
-        <h2>Регистрация</h2>
-        <RegistryForm
-          onClose={onClose}
-          isOpen={isOpen}
-        />
+          <RegistryForm
+            onClose={onClose}
+            isOpen={isOpen}
+          /></div>
       </div>
     </div>
   )

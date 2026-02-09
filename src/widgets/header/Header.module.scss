@@ -12,11 +12,6 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 40px;
-}
-
-.navRight {
-  justify-self: end;
 }
 
 .title {
@@ -28,16 +23,27 @@
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
+.button {
+  justify-self: end;
+}
 
 //---------------------adaptive------------------------
 @include media(tablet) {
-  .navLeft, .navRight {
-      display: none;
+  .header {
+    padding: 4.5vw 0;
+  }
+
+  .title {
+    font-size: clamp(1rem, 7vw, 3rem);
+  }
+
+  .nav, .button {
+    display: none;
   }
 }
 
 @include media(mobile) {
-  .title {
-    font-size: clamp(1rem, 7vw, 3rem);
+  .header {
+    padding: 6vw 0;
   }
 }

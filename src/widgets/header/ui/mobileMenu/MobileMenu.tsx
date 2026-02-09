@@ -1,40 +1,29 @@
-import {BurgerButton} from './burgerButton/BurgerButton.tsx';
-import {useEffect, useState} from 'react';
+import {BurgerButton} from '@/shared/burgerButton/BurgerButton.tsx';
 import {Menu} from './menu/Menu.tsx';
 import style from './MobileMenu.module.scss'
-import type {NavAction, NavItem} from '@/features/nav/types.ts';
+import type {NavItem} from '@/widgets/header/ui/navigation/Nav.tsx';
 
 type Props = {
   items: NavItem[];
-  onAction?: (action: NavItem['action']) => void;
+  isOpen: boolean;
+  onToggle: () => void;
+  onClose: () => void;
+  onRegisterClick: () => void;
 }
 
-export const MobileMenu = ({items, onAction}: Props) => {
-  const[isOpen, setOpen] = useState(false);
-
-  const handleAction = (action?: NavAction) => {
-    onAction?.(action);
-    setOpen(false); // закрываем меню
-  };
-
-  useEffect(() => {
-    if(isOpen) {
-      // Блокируем скролл и убираем возможные скачки верстки из-за исчезновения полосы прокрутки
-      document.body.style.overflow = 'hidden';
-    } else {
-      // Возвращаем скролл
-      document.body.style.overflow = '';
-    }
-    // Чистим эффект при размонтировании компонента (на всякий случай)
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
+export const MobileMenu = ({items, isOpen, onToggle, onClose, onRegisterClick}: Props) => {
   return (
     <div className={style.mobileMenu}>
-      <BurgerButton isOpen={isOpen} onClick={() => setOpen(!isOpen)}/>
-      <Menu isOpen={isOpen} items={items} onAction={handleAction}/>
+      <BurgerButton
+        isOpen={isOpen}
+        onClick={onToggle}
+      />
+      <Menu
+        isOpen={isOpen}
+        items={items}
+        onClick={onRegisterClick}
+        onClose={onClose}
+      />
     </div>
   );
 };
