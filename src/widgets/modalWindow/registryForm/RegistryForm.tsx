@@ -1,6 +1,6 @@
 import style from './RegistryForm.module.scss';
 import {Button} from '@/shared/button/Button.tsx';
-import {type KeyboardEvent, useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import {FormInput} from './formInput/FormInput.tsx';
 
@@ -84,6 +84,7 @@ export const RegistryForm = ({onClose, isOpen}: Props) => {
         labelTitle={'Telegram'}
         name={'email'}
         value={telegram}
+        placeholder={'@maxsotnikov'}
         onChange={setTelegram}
         isLowercase={true}
       />

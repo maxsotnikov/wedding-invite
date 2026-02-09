@@ -40,7 +40,7 @@
 .description {
   width: 100%;
   margin-top: clamp(20px, 1vw, 2vw);
-  line-height: 1.6;
+  line-height: $basicLineHeight;
 }
 
 .button {

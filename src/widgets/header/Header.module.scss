@@ -19,12 +19,6 @@
   justify-self: end;
 }
 
-.navLeft, .navRight {
-  @include media(tablet) {
-    display: none;
-  }
-}
-
 .title {
   position: relative;
   justify-self: center;
@@ -34,14 +28,16 @@
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
+
+//---------------------adaptive------------------------
 @include media(tablet) {
-  .header {
-    font-size: clamp(1.5rem, 1vw, 3rem);
+  .navLeft, .navRight {
+      display: none;
   }
 }
 
 @include media(mobile) {
   .title {
-    font-size: clamp(1rem, 6vw, 3rem);
+    font-size: clamp(1rem, 7vw, 3rem);
   }
 }

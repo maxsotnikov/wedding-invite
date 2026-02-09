@@ -1,5 +1,5 @@
 import style from './ModalWindow.module.scss';
-import {BurgerButton} from '@/widgets/header/mobileMenu/burgerButton/BurgerButton.tsx';
+import {BurgerButton} from '@/widgets/header/ui/mobileMenu/burgerButton/BurgerButton.tsx';
 import {RegistryForm} from './registryForm/RegistryForm.tsx';
 
 type Props = {

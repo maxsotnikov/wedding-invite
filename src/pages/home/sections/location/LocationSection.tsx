@@ -10,7 +10,8 @@ export const LocationSection = () => {
         <div className={style.content}>
           <div className={style.main}>
             <a
-              href={'/'}
+              href={'https://usadba-m.by/'}
+              target="_blank"
               className={style.link}
             >
               Усадьба <br className={style.desktopBreak}/> Марьянино
@@ -23,10 +24,12 @@ export const LocationSection = () => {
               />
             </div>
             <a
-              href={'/'}
+              href={'https://yandex.by/maps/org/usadba_maryanino/74793706989/?ll=27.726079%2C54.054349&z=11'}
+              target="_blank"
               className={style.link}
-            >Карта</a></div>
-          <Button title={'Проезд и проживание'}/>
+            >Карта</a>
+          </div>
+          <Button as={'link'} to={'/location'} title={'Проезд и проживание'}/>
         </div>
       </div>
     </section>

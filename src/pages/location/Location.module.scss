@@ -1,0 +1,51 @@
+@use "@/styles/globalStyles" as *;
+@use '@/styles/variables' as *;
+
+.container {
+  @extend %container;
+  text-align: center;
+}
+
+.content {
+//  text-align: center;
+}
+
+.title {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(27, 26, 26, 0.7), rgba(21, 20, 20, 0.7)), url("@/assets/images/JPG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $secondaryColor;
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: clamp(0.315rem, 0.3vw, 1rem);
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.stay {
+  background-color: rgb(229, 225, 220);
+}
+
+.houseWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > img {
+    width: 100%;
+    max-width: 80%;
+
+  }
+}
+
+span {
+  text-align: left;
+}

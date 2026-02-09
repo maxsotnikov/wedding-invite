@@ -13,7 +13,7 @@
   transition:
     opacity .5s ease,
     visibility .5s ease;
-  z-index: 100;
+  z-index: 1000;
 
   &.isOpen {
     pointer-events: auto;

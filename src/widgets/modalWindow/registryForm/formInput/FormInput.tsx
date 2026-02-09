@@ -4,11 +4,12 @@ type Props = {
   labelTitle: string
   name: string
   value: string
+  placeholder?: string
   onChange: (value: string) => void
   isLowercase?: boolean;
 }
 
-export const FormInput = ({labelTitle, name, value, onChange, isLowercase}: Props) => {
+export const FormInput = ({labelTitle, name, value, onChange, isLowercase, placeholder}: Props) => {
   const handler = () => onChange(value.trim())
 
   return (
@@ -18,6 +19,7 @@ export const FormInput = ({labelTitle, name, value, onChange, isLowercase}: Prop
         name={name}
         value={value}
         onBlur={handler}
+        placeholder={placeholder}
         onChange={e => onChange(e.currentTarget.value)}
         style={isLowercase ? { textTransform: 'lowercase' } : {}}
         className={style.input}

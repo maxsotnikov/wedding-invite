@@ -1,6 +1,6 @@
-import {Nav} from '@/widgets/header/navigation/Nav.tsx';
+import {Nav} from '@/widgets/header/ui/navigation/Nav.tsx';
 import style from './Menu.module.scss'
-import s from '../../Header.module.scss'
+import s from '../../../Header.module.scss'
 import type {NavItem} from '@/features/nav/types.ts';
 
 type Props = {

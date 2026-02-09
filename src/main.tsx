@@ -4,11 +4,12 @@ import './styles/globalStyles.scss'
 import App from './app/App.tsx'
 import {Provider} from 'react-redux';
 import {store} from '@/app/store/store.ts';
+import {HashRouter} from 'react-router';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
-      <App />
+      <HashRouter><App /></HashRouter>
     </Provider>
   </StrictMode>,
 )

@@ -1,6 +1,7 @@
 import style from './Nav.module.scss'
 import {Button} from '@/shared/button/Button.tsx';
 import type {NavItem} from '@/features/nav/types.ts';
+import {Link} from 'react-router';
 
 type Props = {
   items: NavItem[];
@@ -21,11 +22,11 @@ export const Nav = ({items, onAction, className}: Props) => {
                 variant={'secondary'}
               />
             ) : (
-              <a
-                href={item.link}
+              <Link
+                to={item.link || '/'}
               >
                 {item.title}
-              </a>
+              </Link>
             )}
           </li>
         ))}

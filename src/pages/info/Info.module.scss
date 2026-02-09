@@ -1,0 +1,26 @@
+@use "@/styles/globalStyles" as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
+
+.container {
+  @extend %container;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(230, 222, 222, 0.5), rgba(232, 224, 224, 0.5)), url("@/assets/images/info.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
