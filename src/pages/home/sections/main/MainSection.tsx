@@ -1,9 +1,9 @@
-import firstPhoto
-  from '@/assets/images/olga-solodilova-Idqe3vQ-8qo-unsplash.webp'
+import photo1
+  from '@/assets/images/homePage/olga-solodilova-Idqe3vQ-8qo-unsplash.webp'
 import mainPhoto
-  from '@/assets/images/olga-solodilova-Ty1NNPJUsW8-unsplash.webp'
-import thirdPhoto
-  from '@/assets/images/olga-solodilova-LeQVHiw5nww-unsplash.webp'
+  from '@/assets/images/homePage/olga-solodilova-Ty1NNPJUsW8-unsplash.webp'
+import photo2
+  from '@/assets/images/homePage/olga-solodilova-LeQVHiw5nww-unsplash.webp'
 import style from './MainSection.module.scss'
 
 export const MainSection = () => {
@@ -12,21 +12,22 @@ export const MainSection = () => {
       <div className={style.container}>
         <div className={style.content}>
           <img
-            src={firstPhoto}
+            src={photo1}
             alt="photo"
             className={style.sidePhoto}
           />
-          <div className={style.mainPhotoWrapper}>
+          <div className={style.wrapper}>
             <img
               src={mainPhoto}
               alt="photo"
-              className={style.mainPhoto}
             />
-            <p className={style.text}>Мы приглашаем вас разделить с нами этот
-              особенный день</p>
+            <p className={style.text}>
+              Мы приглашаем вас разделить с нами этот
+              особенный день
+            </p>
           </div>
           <img
-            src={thirdPhoto}
+            src={photo2}
             alt="photo"
             className={style.sidePhoto}
           />

@@ -1,5 +1,28 @@
 @use 'variables' as *;
 
+@mixin tabletButton {
+  padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
+  font-size: clamp(1rem, 5vw, 2.5rem);
+}
+
+@mixin flexWrapper($direction: null, $align-items: null, $justify-content: null, $flex-wrap: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin imgWrapper {
+  max-width: 60vw;
+}
+
+@mixin imageStandardSize {
+  width: 100%;
+  max-width: 470px;
+//  margin: 0 auto;
+}
+
 @mixin media($media) {
   @if $media == tablet {
     @media (max-width: $tablet) { @content; }
@@ -9,5 +32,8 @@
   }
   @else if $media == mobile {
     @media (max-width: $mobile) { @content; }
+  }
+  @else if $media == laptop {
+    @media (max-width: $laptop) { @content; }
   }
 }

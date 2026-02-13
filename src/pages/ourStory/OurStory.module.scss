@@ -1,0 +1,117 @@
+@use "@/styles/globalStyles" as *;
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+  @extend %container;
+}
+
+.content {
+
+
+}
+
+.photo1 {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.wrapper {
+  position: relative;
+
+  padding-top: 6vw ;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+//  border: 1px solid red;
+}
+
+.rightWrapper {
+  align-self: center;
+
+}
+
+.imgWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.leftColumn {
+
+}
+
+.namesTitle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  font-size: clamp(2rem, 10vw, 10.5rem);
+  white-space: nowrap;
+  color: rgb(229, 225, 220);
+  z-index: 2;
+}
+
+.wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  width: 100%;
+  max-width: 30%;
+  padding: 8vw 0;
+}
+
+.photo4 {
+  width: 100%;
+  max-width: 70%;
+  aspect-ratio: 7/6;
+  object-fit: cover;
+}
+.photo5 {
+  width: 100%;
+  max-width: 40%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+//-----------------------------------adaptive-----------------------------------
+@include media(smallTablet) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .photo1 {
+    aspect-ratio: 5/4;
+    object-position: 50% 85%;
+    order: 1;
+  }
+
+  .namesTitle {
+    position: static;
+    transform: none;
+    order: 2;
+  }
+
+  .rightWrapper {
+    order: 3;
+  }
+
+  .photo4, .photo5, .text {
+    max-width: 100%;
+  }
+}
+
+
+
+

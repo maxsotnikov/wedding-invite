@@ -4,7 +4,9 @@
 @use '@/styles/variables' as *;
 
 .header {
-  padding: 1.4vw 0;
+//  padding: 1.4vw 0;
+  padding-top: 1.4vw;
+  width: 100%;
 }
 
 .container {
@@ -27,10 +29,11 @@
   justify-self: end;
 }
 
-//---------------------adaptive------------------------
+//-----------------------------------adaptive-----------------------------------
 @include media(tablet) {
   .header {
-    padding: 4.5vw 0;
+//    padding: 4.5vw 0;
+    padding-top: 4.5vw;
   }
 
   .title {
@@ -39,11 +42,5 @@
 
   .nav, .button {
     display: none;
-  }
-}
-
-@include media(mobile) {
-  .header {
-    padding: 6vw 0;
   }
 }

@@ -1,15 +1,16 @@
 import style from './RegistryForm.module.scss';
-import {Button} from '@/shared/button/Button.tsx';
 import {useEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import {FormInput} from './formInput/FormInput.tsx';
+import {Button} from '@/shared/button/Button.tsx';
 
 type Props = {
   onClose: () => void;
   isOpen: boolean;
+  className: string;
 }
 
-export const RegistryForm = ({onClose, isOpen}: Props) => {
+export const RegistryForm = ({onClose, isOpen, className}: Props) => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const [name, setName] = useState('')
@@ -28,7 +29,12 @@ export const RegistryForm = ({onClose, isOpen}: Props) => {
       .then(
         () => {
           console.log('SUCCESS!');
-          if (formRef.current) formRef.current.reset() //очищаем форму после успешной отправки
+          // 1. Очищаем React-стейты (это самое важное!)
+          setName('');
+          setSurname('');
+          setTelegram('');
+          //очищаем форму после успешной отправки
+          if (formRef.current) formRef.current.reset()
           onClose()
         },
         (error) => {
@@ -52,28 +58,29 @@ export const RegistryForm = ({onClose, isOpen}: Props) => {
     <form
       ref={formRef}
       onSubmit={sendEmail}
-      className={style.form}
+      className={`${style.form} ${className}`}
     >
-      <FormInput
+      <div className={style.formInputWrapper}>
+        <FormInput
         labelTitle={'Имя'}
         name={'user_name'}
         value={name}
         onChange={setName}
       />
-      <FormInput
-        labelTitle={'Фамилия'}
-        name={'user_surname'}
-        value={surname}
-        onChange={setSurname}
-      />
-      <FormInput
-        labelTitle={'Telegram'}
-        name={'email'}
-        value={telegram}
-        placeholder={'@maxsotnikov'}
-        onChange={setTelegram}
-        isLowercase={true}
-      />
+        <FormInput
+          labelTitle={'Фамилия'}
+          name={'user_surname'}
+          value={surname}
+          onChange={setSurname}
+        />
+        <FormInput
+          labelTitle={'Telegram'}
+          name={'email'}
+          value={telegram}
+          placeholder={'@maxsotnikov'}
+          onChange={setTelegram}
+          isLowercase={true}
+        /></div>
       <Button
         title={'Отправить'}
         type={'submit'}

@@ -1,9 +1,16 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/globalStyles' as *;
 
 .form {
   display: flex;
+  gap: 3vw;
+}
+
+.formInputWrapper {
+  display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2vw;
 }
 
 .telegramInput {
@@ -14,3 +21,18 @@
   align-self: center;
 }
 
+
+@include media(tablet) {
+  .form {
+    gap: 20vw;
+  }
+
+  .button {
+    @include tabletButton
+  }
+}
+@include media(smallTablet) {
+  .closeButton {
+    top: clamp(15px, 5.5vw, 60px);
+  }
+}

@@ -9,13 +9,13 @@
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(200px, 1vw, 2vw);
-//  gap: 150px;
+  gap: clamp(2vw, 12vw, 100px);
   justify-items: center;
   margin: clamp(20px, 1.5vw, 50px) auto 0;
 }
 
-@include media(smallTablet) {
+//-----------------------------------adaptive-----------------------------------
+@include media(tablet) {
   .content {
     display: flex;
     flex-direction: column;

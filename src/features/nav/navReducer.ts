@@ -6,7 +6,7 @@ export const setNavItemAC = createAction<{items: NavItem[]}>('nav/setNavItem')
 export const initialState: NavState = {
   items: [
     {id: 'info', title: 'Информация', link: '/info'},
-    {id: 'history', title: 'Наша история', link: '/'},
+    {id: 'story', title: 'Наша история', link: '/our-story'},
   ]
 }
 

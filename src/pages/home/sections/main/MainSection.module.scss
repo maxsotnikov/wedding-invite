@@ -10,15 +10,9 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: min(15vw, 200px);
+  column-gap: clamp(2vw, 10vw, 200px);
   align-items: center;
   justify-items: center;
-
-  img {
-    width: 100%; //почему если уберу то будет большая ширина
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-  }
 }
 
 .sidePhoto {
@@ -26,9 +20,8 @@
   margin-bottom: clamp(3vw, 5vw, 10vw);
 }
 
-.mainPhotoWrapper {
-  display: flex;
-  flex-direction: column;
+.wrapper {
+  @include flexWrapper(column, center, center);
   gap: clamp(30px, 1vw, 4vw);
 
   img {
@@ -50,19 +43,19 @@
   font-size: clamp(3.75rem, 10vw, 9.375rem);
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  z-index: 1;
+//  z-index: 1;
 }
 
-@include media(smallTablet) {
+//---------------------------------adaptive-------------------------------------
+@include media(tablet) {
   .content {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
     grid-template-areas:
       "main main"
       "photo1 photo2";
   }
 
-  .mainPhotoWrapper {
+  .wrapper {
     width: 100%;
     max-width: 60vw;
     grid-area: main;
@@ -74,7 +67,6 @@
   }
 
   .sidePhoto {
-    width: 100%;
     max-width: 30vw;
   }
 

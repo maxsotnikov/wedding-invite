@@ -1,7 +1,7 @@
 @use '@/styles/variables' as *;
 @use '@/styles/mixins' as *;
 
-.button {
+%button {
   padding: clamp(16px, 1vw, 32px);
   border: 1px solid $primaryColor;
   transition: opacity 0.1s linear;
@@ -11,6 +11,7 @@
 }
 
 .primary {
+  @extend %button;
   background-color: $primaryColor;
   color: $secondaryColor;
 
@@ -19,8 +20,6 @@
   }
 
   &:focus-visible {
-//    outline: 3px solid red;
-
     box-shadow:
       0 0 0 1px #000,
       0 0 0 3px #fff,
@@ -29,6 +28,7 @@
 }
 
 .secondary {
+  @extend %button;
   padding: clamp(8px, 1vw, 16px ) clamp(12px, 1vw, 24px );
   background-color: transparent;
   color: $primaryColor;
@@ -45,8 +45,6 @@
 
 @include media(tablet) {
   .secondary {
-    padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
-    font-size: clamp(1rem, 5vw, 2.5rem);
-
+    @include tabletButton
   }
 }

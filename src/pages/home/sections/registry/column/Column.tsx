@@ -6,10 +6,10 @@ type Props = {
   buttonTitle: string;
   src: string
   alt: string;
-  description: string;
+  text: string;
 }
 
-export const Column = ({src, alt, title, description, buttonTitle}: Props) => {
+export const Column = ({src, alt, title, text, buttonTitle}: Props) => {
   return (
     <div className={style.column}>
       <div className={style.wrapper}>
@@ -18,7 +18,7 @@ export const Column = ({src, alt, title, description, buttonTitle}: Props) => {
           src={src}
           alt={alt}
         />
-        <p className={style.description}>{description}</p>
+        <p className={style.text}>{text}</p>
       </div>
       <Button title={buttonTitle} className={style.button}/>
     </div>

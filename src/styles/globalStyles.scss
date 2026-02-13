@@ -20,7 +20,7 @@ body {
 }
 
 section {
-  padding: 8vh 0;
+  padding: 6vw 0;
 //  border: 2px solid blue;
 }
 
@@ -28,6 +28,7 @@ h2, h3 {
   font-family: $mainFontFamily;
   font-weight: inherit;
   font-size: $titleFontSize;
+  text-align: center;
 }
 
 a {
@@ -43,12 +44,17 @@ button {
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 %container {
   max-width: 1440px;
   width: 100%;
   padding-inline: 15px;
   margin: 0 auto;
-//  border: 2px solid red;
+  border: 2px solid red;
 }
 
 @include media(tablet) {

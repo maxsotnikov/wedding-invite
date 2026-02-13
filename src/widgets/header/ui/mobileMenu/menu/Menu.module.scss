@@ -4,7 +4,7 @@
 .menu {
   position: fixed;
   inset: 0;
-  padding: 5vw 0;
+  padding: 4.5vw 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -58,5 +58,11 @@
     ul {
       gap: clamp(2em, 1vw, 2vw);
     }
+  }
+}
+
+@include media(mobile) {
+  .menu {
+//    padding: 6vw 0;
   }
 }

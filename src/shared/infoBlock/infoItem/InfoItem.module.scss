@@ -1,31 +1,37 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .infoItem {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   text-align: left;
-  gap: clamp(10em, 4vw, 5vw);
+  gap: clamp(5em, 4vw, 5vw);
 
 }
 
 .titleWrapper {
   width: 100%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
+  gap: clamp(1vw, 2vw, 2vw);
 }
 
 .title {
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-align: left;
 }
 
 .subtitle {
-  font-size: $navFontSize;
+//  font-size: $navFontSize;
   line-height: $basicLineHeight;
 }
 
 .list {
+  width: 100%;
+  max-width: 50%;
   list-style: disc;
-  font-size: $navFontSize;
+//  font-size: $navFontSize;
   line-height: $basicLineHeight;
   display: flex;
   flex-direction: column;
@@ -35,5 +41,23 @@
 .question {
   font-size: clamp(1rem, 1.2vw, 1.5rem);
   margin-bottom: 0.4em;
+}
+
+//-----------------------------------adaptive-----------------------------------
+@include media(tablet) {
+  .infoItem {
+    flex-wrap: wrap;
+    gap: 5vw;
+  }
+
+  .titleWrapper {
+    max-width: 100%;
+
+  }
+
+  .list {
+    padding-left: clamp(20px, 4vw, 5vw);
+    max-width: 100%;
+  }
 }
 

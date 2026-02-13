@@ -5,10 +5,8 @@
 .scheduleSection {
   position: relative;
   min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('@/assets/images/andres-molina-wIfDI58tCuU-unsplash.webp');
+  @include flexWrapper(row, center, center);
+  background-image: url('@/assets/images/homePage/andres-molina-wIfDI58tCuU-unsplash.webp');
   background-position: 0 40%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +19,7 @@
     background-color: rgba(18, 16, 16, 0.84);
     top: 0;
     left: 0;
-    z-index: 1; // поверх фона, но под контентом
+    //    z-index: 1; // поверх фона, но под контентом
   }
 }
 
@@ -31,12 +29,10 @@
 
 .content {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  @include flexWrapper(column);
   gap: $titleGap;
-  text-align: center;
   color: $secondaryColor;
-  z-index: 2;
+  //  z-index: 2;
 }
 
 .schedule {
@@ -44,11 +40,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(50px, 1vw, 2vw);
+  text-align: center;
 
   div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexWrapper(column, center, center);
     gap: clamp(20px, 1vw, 5vw);
 
     & > span:first-child {
@@ -58,29 +53,35 @@
   }
 }
 
-@include media(smallTablet) {
+//-----------------------------------adaptive-----------------------------------
+@include media(tablet) {
   .scheduleSection {
-    min-height: 100vh;
-  }
+    min-height: 50vh;
 
-  .content {
-    gap: 5vh;
-  }
-
-  .schedule {
-    display: flex;
-    flex-direction: column;
-
-    div {
-      gap: clamp(10px, 1vw, 5vw);
-
-      & > span:first-child {
-        font-size: clamp(1rem, 10vw, 5rem);
-      }
-    }
-  }
-
-  .title {
-    font-size: $mobileTitleFontSize
   }
 }
+  @include media(smallTablet) {
+    .scheduleSection {
+      min-height: 100vh;
+    }
+
+    .content {
+      gap: 5vh;
+    }
+
+    .schedule {
+      @include flexWrapper(column);
+
+      div {
+        gap: clamp(10px, 1vw, 5vw);
+
+        & > span:first-child {
+          font-size: clamp(1rem, 10vw, 5rem);
+        }
+      }
+    }
+
+    .title {
+      font-size: $mobileTitleFontSize
+    }
+  }

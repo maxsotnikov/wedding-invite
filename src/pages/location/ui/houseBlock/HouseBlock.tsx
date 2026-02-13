@@ -1,7 +1,7 @@
 import style from './HouseBlock.module.scss'
-import house1 from '@/assets/images/1__.jpeg.jpg';
-import house2 from '@/assets/images/IMG_4304__.jpeg.jpg'
-import house3 from '@/assets/images/3___.jpeg.jpg'
+import house1 from '@/assets/images/location/1__.jpeg.jpg';
+import house2 from '@/assets/images/locationPage/IMG_4304__.jpeg.jpg'
+import house3 from '@/assets/images/location/3___.jpeg.jpg'
 
 
 export const HouseBlock = () => {

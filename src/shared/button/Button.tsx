@@ -22,7 +22,7 @@ type Props = ButtonProps | LinkProps
 
 export const Button = (props: Props) => {
   const {title, className, variant = 'primary', as} = props
-  const styleButton = `${style.button} ${style[variant]} ${className ?? ''}`
+  const styleButton = ` ${style[variant]} ${className ?? ''}`
 
   if (as === 'link') {
     return (

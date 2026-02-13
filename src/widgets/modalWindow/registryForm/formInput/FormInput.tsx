@@ -10,7 +10,13 @@ type Props = {
 }
 
 export const FormInput = ({labelTitle, name, value, onChange, isLowercase, placeholder}: Props) => {
-  const handler = () => onChange(value.trim())
+  // Триммим только если значение действительно изменилось
+  const handleBlur = () => {
+    const trimmed = value.trim()
+    if(trimmed !== value) {
+      onChange(trimmed)
+    }
+  }
 
   return (
     <label className={style.label}>
@@ -18,7 +24,7 @@ export const FormInput = ({labelTitle, name, value, onChange, isLowercase, place
       <input
         name={name}
         value={value}
-        onBlur={handler}
+        onBlur={handleBlur}
         placeholder={placeholder}
         onChange={e => onChange(e.currentTarget.value)}
         style={isLowercase ? { textTransform: 'lowercase' } : {}}

@@ -15,16 +15,16 @@ export const ModalWindow = ({isOpen, onClose}: Props) => {
         onClick={e => e.stopPropagation()}
       >
         <h2 className={style.title}>Регистрация</h2>
-        <div className={style.navWrapper}>
-          <BurgerButton
+        <BurgerButton
           isOpen={true}
           onClick={() => onClose()}
           className={style.closeButton}
         />
-          <RegistryForm
-            onClose={onClose}
-            isOpen={isOpen}
-          /></div>
+        <RegistryForm
+          onClose={onClose}
+          isOpen={isOpen}
+          className={style.navWrapper}
+        />
       </div>
     </div>
   )

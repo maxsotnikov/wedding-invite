@@ -1,4 +1,6 @@
+import style from '../Info.module.scss'
 import type {InfoBlockType} from '@/shared/types/types.ts';
+import {Link} from 'react-router';
 
 export const INFO_DATE: InfoBlockType[] = [
   {
@@ -13,15 +15,19 @@ export const INFO_DATE: InfoBlockType[] = [
   },
   {
     id: 'accommodation',
-    title: 'Проживание',
+    title: 'Проезд и проживание',
     description: [
       {
-        questions: 'Где остановиться?',
-        answer: 'На территории размещаются 3 гостевых домика'
-      },
-      {
-        questions: 'Как добраться обратно?',
-        answer: 'Мы организуем трансфер .'
+        questions: 'Как добраться и где остановиться?',
+        answer: (
+          <>
+            С данной информацией вы можете более подробно ознакомиться {' '}
+            <Link
+              to={'/location'}
+              className={style.link}
+            >здесь</Link>
+          </>
+        )
       },
     ]
   },
