@@ -1,15 +1,28 @@
 import style from './ModalWindow.module.scss';
 import {BurgerButton} from '@/shared/burgerButton/BurgerButton.tsx';
 import {RegistryForm} from './registryForm/RegistryForm.tsx';
+import {useEffect} from 'react';
 
 type Props = {
-  isOpen: boolean;
+  isModalOpen: boolean;
+  isMobileMenuOpen?: boolean;
   onClose: () => void;
 };
 
-export const ModalWindow = ({isOpen, onClose}: Props) => {
+export const ModalWindow = ({isModalOpen,isMobileMenuOpen, onClose}: Props) => {
+  useEffect(() => {
+    // Блокируем скролл и убираем возможные скачки верстки из-за исчезновения полосы прокрутки
+    document.body.style.overflow =
+      isModalOpen || isMobileMenuOpen ? 'hidden' : '';
+
+    return () => {
+      // Чистим эффект при размонтировании компонента (на всякий случай)
+      document.body.style.overflow = '';
+    };
+  }, [isModalOpen, isMobileMenuOpen]);
+
   return (
-    <div className={`${style.overlay} ${isOpen ? style.isOpen : ''}`}>
+    <div className={`${style.overlay} ${isModalOpen ? style.isOpen : ''}`}>
       <div
         className={style.modal}
         onClick={e => e.stopPropagation()}
@@ -22,7 +35,7 @@ export const ModalWindow = ({isOpen, onClose}: Props) => {
         />
         <RegistryForm
           onClose={onClose}
-          isOpen={isOpen}
+          isOpen={isModalOpen}
           className={style.navWrapper}
         />
       </div>

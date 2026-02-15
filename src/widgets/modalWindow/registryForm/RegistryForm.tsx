@@ -80,7 +80,8 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
           placeholder={'@maxsotnikov'}
           onChange={setTelegram}
           isLowercase={true}
-        /></div>
+        />
+      </div>
       <Button
         title={'Отправить'}
         type={'submit'}

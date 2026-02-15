@@ -30,9 +30,12 @@
 .content {
   position: relative;
   @include flexWrapper(column);
-  gap: $titleGap;
   color: $secondaryColor;
   //  z-index: 2;
+}
+
+.title {
+  @include titlePadding;
 }
 
 .schedule {

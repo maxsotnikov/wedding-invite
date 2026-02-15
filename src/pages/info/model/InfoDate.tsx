@@ -31,4 +31,24 @@ export const INFO_DATE: InfoBlockType[] = [
       },
     ]
   },
+  {
+    id: 'gifts',
+    title: 'Подарки',
+    subTitle: 'Ваше присутствие — бесценный подарок для нас. А если вы захотите поздравить нас ещё и знаком внимания, мы с любовью собрали несколько вариантов, которые могут быть вам близки',
+    description: [
+      {
+        questions: 'Цветочная подписка',
+        answer: (
+          <>
+            Самые красивые цветы — те, что дарят радость не на один день. Если вы захотите порадовать нас цветами, вы можете внести любую сумму в нашу цветочную {' '}
+            <a
+              href={'https://koshikshop.by/?utm_source=businesscard&utm_medium=topmapsbiz&utm_campaign=website'}
+              target="_blank"
+              className={style.link}
+            >подписку</a>
+          </>
+        )
+      },
+    ]
+  },
 ]

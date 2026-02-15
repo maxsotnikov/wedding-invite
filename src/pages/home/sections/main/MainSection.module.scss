@@ -22,7 +22,7 @@
 
 .wrapper {
   @include flexWrapper(column, center, center);
-  gap: clamp(30px, 1vw, 4vw);
+  gap: $textGap;
 
   img {
     aspect-ratio: 3 / 4;
@@ -49,7 +49,7 @@
 //---------------------------------adaptive-------------------------------------
 @include media(tablet) {
   .content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-areas:
       "main main"
       "photo1 photo2";
@@ -57,25 +57,28 @@
 
   .wrapper {
     width: 100%;
-    max-width: 60vw;
+    @include imgWrapper;
     grid-area: main;
     gap: 0;
   }
 
   .text {
-    padding: 4vh 0;
+    padding: clamp(30px, 4vw, 4vw) 0;
   }
 
   .sidePhoto {
     max-width: 30vw;
+    margin: 0;
   }
 
   .sidePhoto:first-of-type {
     grid-area: photo1;
+    justify-self: flex-end;
   }
 
   .sidePhoto:last-of-type {
     grid-area: photo2;
+    justify-self: start;
   }
 
   .date {

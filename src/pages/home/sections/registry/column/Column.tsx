@@ -4,12 +4,15 @@ import {Button} from '@/shared/button/Button.tsx';
 type Props = {
   title: string;
   buttonTitle: string;
+  onClick?: () => void
+  as?: 'link'
+  to?: string
   src: string
   alt: string;
   text: string;
 }
 
-export const Column = ({src, alt, title, text, buttonTitle}: Props) => {
+export const Column = ({src, alt, title, text, buttonTitle, onClick, as, to}: Props) => {
   return (
     <div className={style.column}>
       <div className={style.wrapper}>
@@ -20,7 +23,7 @@ export const Column = ({src, alt, title, text, buttonTitle}: Props) => {
         />
         <p className={style.text}>{text}</p>
       </div>
-      <Button title={buttonTitle} className={style.button}/>
+      <Button title={buttonTitle} className={style.button} onClick={onClick} as={as} to={to!}/>
     </div>
   );
-};
+}; //Оператор "!" говорит TS: "Поверь мне, здесь не undefined"

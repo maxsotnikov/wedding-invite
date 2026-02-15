@@ -1,10 +1,5 @@
 @use 'variables' as *;
 
-@mixin tabletButton {
-  padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
-  font-size: clamp(1rem, 5vw, 2.5rem);
-}
-
 @mixin flexWrapper($direction: null, $align-items: null, $justify-content: null, $flex-wrap: null) {
   display: flex;
   flex-direction: $direction;
@@ -13,8 +8,17 @@
   flex-wrap: $flex-wrap;
 }
 
+@mixin tabletButton {
+  padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
+  font-size: clamp(1rem, 5vw, 2.5rem);
+}
+
 @mixin imgWrapper {
-  max-width: 60vw;
+  max-width: 70vw;
+}
+
+@mixin titlePadding {
+  padding-bottom: 6vw;
 }
 
 @mixin imageStandardSize {

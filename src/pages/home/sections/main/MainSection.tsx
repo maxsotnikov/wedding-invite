@@ -20,6 +20,7 @@ export const MainSection = () => {
             <img
               src={mainPhoto}
               alt="photo"
+              className={style.mainPhoto}
             />
             <p className={style.text}>
               Мы приглашаем вас разделить с нами этот

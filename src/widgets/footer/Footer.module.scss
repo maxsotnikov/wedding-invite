@@ -1,12 +1,19 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .footer {
-  padding: 2vw;
+  padding: 2vw 0;
   background-color: $primaryColor;
 }
 
 .text {
   font-size: $basicFontSize;
   color: $secondaryColor;
-  text-align: center;
+}
+
+//---------------------------------adaptive-------------------------------------
+@include media(tablet) {
+  .footer {
+    padding: 4vw 0;
+  }
 }

@@ -6,112 +6,98 @@
   @extend %container;
 }
 
-.content {
-
-
+.title {
+  @include titlePadding;
 }
 
-.photo1 {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-}
-
-.wrapper {
+.wrapper1 {
   position: relative;
-
-  padding-top: 6vw ;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: clamp(40px, 5vw, 200px);
 //  border: 1px solid red;
-}
 
-.rightWrapper {
-  align-self: center;
+  .photo1 {
+    aspect-ratio: 3/4;
+  }
 
-}
+  .descriptionWrapper {
+    align-self: center;
+    @include flexWrapper(column);
+    gap: $textGap;
 
-.imgWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+    .imgWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(10px, 1vw, 50px);
 
-  img {
-    width: 100%;
+      img {
+        aspect-ratio: 3/4;
+      }
+    }
+  }
+
+  .namesTitle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    font-size: clamp(2rem, 10vw, 10.5rem);
+    white-space: nowrap;
+    color: $additionalColor;
+//    z-index: 2;
   }
 }
 
-.leftColumn {
-
-}
-
-.namesTitle {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 50%);
-  font-size: clamp(2rem, 10vw, 10.5rem);
-  white-space: nowrap;
-  color: rgb(229, 225, 220);
-  z-index: 2;
-}
-
 .wrapper2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  @include flexWrapper(column, center);
 
-.text {
-  width: 100%;
-  max-width: 30%;
-  padding: 8vw 0;
-}
+  .text {
+    max-width: 30%;
+    padding: $basicPadding;
+  }
 
-.photo4 {
-  width: 100%;
-  max-width: 70%;
-  aspect-ratio: 7/6;
-  object-fit: cover;
-}
-.photo5 {
-  width: 100%;
-  max-width: 40%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
+  .photo4 {
+    max-width: 70%;
+    aspect-ratio: 7/6;
+  }
+
+  .photo5 {
+    max-width: 40%;
+    aspect-ratio: 3/4;
+  }
 }
 
 //-----------------------------------adaptive-----------------------------------
 @include media(smallTablet) {
-  .wrapper {
+  .wrapper1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    .photo1 {
+      aspect-ratio: 5/4;
+      object-position: 50% 85%;
+      order: 1;
+    }
+
+    .namesTitle {
+      position: static;
+      transform: none;
+      order: 2;
+    }
+
+    .descriptionWrapper {
+      order: 3;
+    }
   }
 
-  .photo1 {
-    aspect-ratio: 5/4;
-    object-position: 50% 85%;
-    order: 1;
-  }
-
-  .namesTitle {
-    position: static;
-    transform: none;
-    order: 2;
-  }
-
-  .rightWrapper {
-    order: 3;
-  }
-
-  .photo4, .photo5, .text {
-    max-width: 100%;
+  .wrapper2 {
+    .photo4, .photo5, .text {
+      max-width: 100%;
+    }
   }
 }
-
-
 
 

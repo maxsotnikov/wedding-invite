@@ -7,6 +7,8 @@ $laptop : 1280px;
 //--------------colors-------------
 $primaryColor: hsla(40, 15%, 7.84%, 1);
 $secondaryColor: hsla(40,17.65%,96.67%,1);
+$additionalColor: rgb(229, 225, 220);
+$inputColor: #787676;
 
 //--------------font-family--------------
 $mainFontFamily: 'Cormorant SC', Times, serif;
@@ -24,4 +26,7 @@ $navFontSize: clamp(0.75rem, 1vw, 1rem);
 $basicLineHeight: 1.6;
 
 //--------------gap--------------
-$titleGap: clamp(1vw, 4vw, 5vw);
+$textGap: clamp(30px, 4vw, 100px) 0;
+
+//--------------padding--------------
+$basicPadding:  6vw 0;

@@ -1,7 +1,7 @@
 import style from './Header.module.scss'
 import {Nav} from '@/widgets/header/ui/navigation/Nav.tsx';
 import {MobileMenu} from '@/widgets/header/ui/mobileMenu/MobileMenu.tsx';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {selectNav} from '@/features/nav/navSelector.ts';
 import {ModalWindow} from '@/widgets/modalWindow/ModalWindow.tsx';
 import {useAppSelector} from '@/shared/hooks/hooks.ts';
@@ -14,17 +14,6 @@ export const Header = () => {
 
   const navState = useAppSelector(selectNav);
   const nav = navState.items;
-
-  useEffect(() => {
-    // Блокируем скролл и убираем возможные скачки верстки из-за исчезновения полосы прокрутки
-    document.body.style.overflow =
-      isModalOpen || isMobileMenuOpen ? 'hidden' : '';
-
-    return () => {
-      // Чистим эффект при размонтировании компонента (на всякий случай)
-      document.body.style.overflow = '';
-    };
-  }, [isModalOpen, isMobileMenuOpen]);
 
   return (
     <>
@@ -56,9 +45,9 @@ export const Header = () => {
           />
         </div>
       </header>
-
       <ModalWindow
-        isOpen={isModalOpen}
+        isModalOpen={isModalOpen}
+        isMobileMenuOpen={isMobileMenuOpen}
         onClose={() => setIsModalOpen(false)}
       />
     </>
