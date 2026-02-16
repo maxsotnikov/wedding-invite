@@ -1,6 +1,6 @@
 import {InfoItem} from '@/shared/infoBlock/infoItem/InfoItem.tsx';
 import style from './InfoBlock.module.scss'
-import type {InfoBlockType} from '@/pages/info/types/types.ts';
+import type {InfoBlockType} from '@/shared/types/infoTypes.ts';
 
 type Props = {
   data: InfoBlockType[]

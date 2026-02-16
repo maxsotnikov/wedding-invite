@@ -1,5 +1,5 @@
 import style from '../Info.module.scss'
-import type {InfoBlockType} from '@/pages/info/types/infoTypes.ts';
+import type {InfoBlockType} from '@/shared/types/infoTypes.ts';
 import {Link} from 'react-router';
 
 export const INFO_DATE: InfoBlockType[] = [

@@ -1,4 +1,4 @@
-import type {InfoBlockType} from '@/pages/info/types/types.ts';
+import type {InfoBlockType} from '@/shared/types/infoTypes.ts';
 import style from '../Location.module.scss'
 
 export const LOCATION_DATE: InfoBlockType[] = [
