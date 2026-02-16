@@ -3,14 +3,13 @@
 @use '@/styles/globalStyles' as *;
 
 .form {
-  display: flex;
   width: 100%;
+  @include flexWrapper(raw);
   gap: 3vw;
 }
 
 .formInputWrapper {
-  display: flex;
-  flex-direction: column;
+  @include flexWrapper(column);
   gap: 2vw;
 }
 
@@ -22,17 +21,30 @@
   align-self: center;
 }
 
-
+//---------------------------------adaptive-------------------------------------
 @include media(tablet) {
   .form {
-    gap: 20vw;
+    gap: 10vw;
+  }
+
+  .formInputWrapper {
+    gap: 5vw;
   }
 
   .button {
-    @include tabletButton
+    @include tabletButton;
   }
 }
+
 @include media(smallTablet) {
+  .formInputWrapper {
+    gap: 10vw;
+  }
+
+  .button {
+    align-self: auto;
+  }
+
   .closeButton {
     top: clamp(15px, 5.5vw, 60px);
   }

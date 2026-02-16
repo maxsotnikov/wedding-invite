@@ -46,7 +46,7 @@
   text-align: center;
 
   div {
-    @include flexWrapper(column, center, center);
+    @include flexWrapper(column, center);
     gap: clamp(20px, 1vw, 5vw);
 
     & > span:first-child {
@@ -63,28 +63,29 @@
 
   }
 }
-  @include media(smallTablet) {
-    .scheduleSection {
-      min-height: 100vh;
-    }
 
-    .content {
-      gap: 5vh;
-    }
+@include media(smallTablet) {
+  .scheduleSection {
+    min-height: 100vh;
+  }
 
-    .schedule {
-      @include flexWrapper(column);
+  .content {
+    gap: 5vh;
+  }
 
-      div {
-        gap: clamp(10px, 1vw, 5vw);
+  .schedule {
+    @include flexWrapper(column);
 
-        & > span:first-child {
-          font-size: clamp(1rem, 10vw, 5rem);
-        }
+    div {
+      gap: clamp(10px, 1vw, 5vw);
+
+      & > span:first-child {
+        font-size: clamp(1rem, 10vw, 5rem);
       }
     }
-
-    .title {
-      font-size: $mobileTitleFontSize
-    }
   }
+
+  .title {
+    font-size: $mobileTitleFontSize
+  }
+}

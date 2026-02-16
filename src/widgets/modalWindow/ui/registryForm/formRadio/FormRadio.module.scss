@@ -23,6 +23,12 @@
   span, input[type="radio"] {
     color: $primaryColor;
     accent-color: $primaryColor;
-//    -moz-accent-color: $primaryColor;
+  }
+}
+
+//---------------------------------adaptive-------------------------------------
+@include media(tablet) {
+  .labelWrapper {
+    gap: 10px;
   }
 }
