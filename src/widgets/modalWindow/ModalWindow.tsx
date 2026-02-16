@@ -1,6 +1,6 @@
 import style from './ModalWindow.module.scss';
 import {BurgerButton} from '@/shared/burgerButton/BurgerButton.tsx';
-import {RegistryForm} from './registryForm/RegistryForm.tsx';
+import {RegistryForm} from '@/widgets/modalWindow/ui/registryForm/RegistryForm.tsx';
 import {useEffect} from 'react';
 
 type Props = {

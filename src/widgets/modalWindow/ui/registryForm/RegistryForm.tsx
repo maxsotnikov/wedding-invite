@@ -3,6 +3,10 @@ import {useEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import {FormInput} from './formInput/FormInput.tsx';
 import {Button} from '@/shared/button/Button.tsx';
+import {
+  FormRadio
+} from '@/widgets/modalWindow/ui/registryForm/formRadio/FormRadio.tsx';
+import {FORM_RADIO} from '@/widgets/modalWindow/model/FormDate.ts';
 
 type Props = {
   onClose: () => void;
@@ -16,11 +20,19 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
   const [name, setName] = useState('')
   const [surname, setSurname] = useState('')
   const [telegram, setTelegram] = useState('')
+  const [radioValues, setRadioValues] = useState<Record<string, string>>({overnight:'', transport:''})
+
+  const handleRadioChange = (name: string, value: string) => {
+    setRadioValues(prev => ({ ...prev, [name]: value }));
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formRef.current) return
+
+    const formData = new FormData(formRef.current);
+    console.log('Данные перед отправкой:', Object.fromEntries(formData));
 
     emailjs
       .sendForm('service_k05yrpx', 'template_ft8t548', formRef.current, {
@@ -33,6 +45,7 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
           setName('');
           setSurname('');
           setTelegram('');
+          setRadioValues({overnight:'', transport: ''});
           //очищаем форму после успешной отправки
           if (formRef.current) formRef.current.reset()
           onClose()
@@ -62,11 +75,11 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
     >
       <div className={style.formInputWrapper}>
         <FormInput
-        labelTitle={'Имя'}
-        name={'user_name'}
-        value={name}
-        onChange={setName}
-      />
+          labelTitle={'Имя'}
+          name={'user_name'}
+          value={name}
+          onChange={setName}
+        />
         <FormInput
           labelTitle={'Фамилия'}
           name={'user_surname'}
@@ -81,6 +94,16 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
           onChange={setTelegram}
           isLowercase={true}
         />
+        {FORM_RADIO.map(element => (
+          <FormRadio
+            key={element.name}
+            title={element.title}
+            name={element.name}
+            options={element.options}
+            selectedOption={radioValues[element.name]}
+            onChange={(value) => handleRadioChange(element.name, value)}
+          />
+        ))}
       </div>
       <Button
         title={'Отправить'}

@@ -1,5 +1,5 @@
 import style from './InfoItem.module.scss';
-import type {InfoBlockType} from '@/shared/types/types.ts';
+import type {InfoBlockType} from '@/pages/info/types/types.ts';
 
 
 export const InfoItem = ({id, title, subTitle, description}: InfoBlockType) => {

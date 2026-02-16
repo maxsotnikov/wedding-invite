@@ -15,8 +15,8 @@
   background-color: $primaryColor;
   color: $secondaryColor;
 
-  &:hover {
-    opacity: 0.9;
+  &:active {
+    opacity: 0.8;
   }
 
   &:focus-visible {

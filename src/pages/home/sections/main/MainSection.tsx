@@ -1,9 +1,9 @@
 import photo1
-  from '@/assets/images/homePage/olga-solodilova-Idqe3vQ-8qo-unsplash.webp'
+  from '@/assets/images/homePage/IMG_8461.webp'
 import mainPhoto
-  from '@/assets/images/homePage/olga-solodilova-Ty1NNPJUsW8-unsplash.webp'
+  from '@/assets/images/homePage/IMG_8464.webp'
 import photo2
-  from '@/assets/images/homePage/olga-solodilova-LeQVHiw5nww-unsplash.webp'
+  from '@/assets/images/homePage/IMG_8462.webp'
 import style from './MainSection.module.scss'
 
 export const MainSection = () => {

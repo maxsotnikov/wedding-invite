@@ -1,17 +1,28 @@
 @use '@/styles/variables' as *;
 @use '@/styles/mixins' as *;
 
-.option {
+.mainWrapper {
+  @include flexWrapper(column);
+  gap: 10px;
+}
+
+.title {
   color: $inputColor;
+}
+
+.labelWrapper {
+  @include flexWrapper(column);
+  gap: 5px;
 }
 
 .label {
   @include flexWrapper(raw);
   gap: 5px;
+  cursor: pointer;
 
   span, input[type="radio"] {
     color: $primaryColor;
     accent-color: $primaryColor;
-    -moz-accent-color: $primaryColor;
+//    -moz-accent-color: $primaryColor;
   }
 }

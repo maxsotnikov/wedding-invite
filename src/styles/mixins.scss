@@ -9,8 +9,8 @@
 }
 
 @mixin tabletButton {
-  padding: clamp(1em, 1vw, 2em) clamp(2em, 1vw, 2em);
-  font-size: clamp(1rem, 5vw, 2.5rem);
+  padding: clamp(1em, 1vw, 2em) clamp(1.5em, 1vw, 2em);
+  font-size: clamp(1em, 5vw, 2.5em);
 }
 
 @mixin imgWrapper {
