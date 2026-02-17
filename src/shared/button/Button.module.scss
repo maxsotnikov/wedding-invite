@@ -15,7 +15,11 @@
   background-color: $primaryColor;
   color: $secondaryColor;
 
-  &:active {
+  &:hover{
+    opacity: 0.9;
+  }
+
+  &:active{
     opacity: 0.8;
   }
 
@@ -34,7 +38,6 @@
   color: $primaryColor;
   font-weight: 500;
   font-size: $navFontSize;
-
 
   &:hover {
     background-color: $primaryColor;

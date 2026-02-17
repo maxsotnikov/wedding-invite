@@ -1,9 +1,9 @@
 import photo1
-  from '@/assets/images/homePage/IMG_8461.webp'
+  from '@/assets/images/homePage/bc08dfe0-12b6-444c-aeb0-9f5c690884f5.webp'
 import mainPhoto
-  from '@/assets/images/homePage/IMG_8464.webp'
+  from '@/assets/images/homePage/859895f6-b05a-422f-9f4c-c9fd58511dd2.webp'
 import photo2
-  from '@/assets/images/homePage/IMG_8462.webp'
+  from '@/assets/images/homePage/15767461-9e8a-40a1-90b2-abc8f00bd6ad.webp'
 import style from './MainSection.module.scss'
 
 export const MainSection = () => {

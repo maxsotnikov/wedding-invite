@@ -1,5 +1,5 @@
 import style from './Nav.module.scss'
-import {Link} from 'react-router';
+import {NavLink} from 'react-router';
 
 export type NavItem = {
   id: string;
@@ -23,7 +23,7 @@ export const Nav = ({items, className, onClose}: Props) => {
       <ul className={style.list}>
         {items.map((item) => (
           <li key={item.id}>
-            <Link to={item.link || '/'} onClick={onClose}>{item.title}</Link>
+            <NavLink to={item.link || '/'} onClick={onClose} className={({ isActive }) => isActive ? `${style.link} ${style.activeNavLink}` : style.link}>{item.title}</NavLink>
           </li>
         ))}
       </ul>

@@ -42,7 +42,7 @@ export const INFO_DATE: InfoBlockType[] = [
           <>
             Самые красивые цветы — те, что дарят радость не на один день. Если вы захотите порадовать нас цветами, вы можете внести любую сумму в нашу цветочную {' '}
             <a
-              href={'https://koshikshop.by/?utm_source=businesscard&utm_medium=topmapsbiz&utm_campaign=website'}
+              href={'https://pay.raschet.by/#00020101021132530010by.raschet01074440631101828154-1-10.05.202612021133180014by.epos.bePaid530393354040.005502015802BY5923Obschestwosogranichenno6005Minsk62270323Obschestwosogranichenno64330002ru0123Obschestwosogranichenno63049E5F'}
               target="_blank"
               className={style.link}
             >подписку</a>

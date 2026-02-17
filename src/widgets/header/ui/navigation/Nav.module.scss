@@ -2,14 +2,39 @@
 @use '@/styles/mixins' as *;
 
 .list {
-  display: flex;
-  align-items: center;
-  gap: clamp(20px, 1vw, 2vw);
+  @include flexWrapper(raw, center);
+  gap: clamp(20px, 2vw, 2vw);
   font-size: $navFontSize;
+
+  &:hover {
+    .link {
+      color: $inputColor;
+      text-decoration-color: $inputColor;
+    }
+  }
 }
+
+.link {
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+
+  &:hover {
+    color: $primaryColor !important;
+    text-decoration-color: $primaryColor !important;
+  }
+}
+
+.activeNavLink {
+  text-underline-offset: clamp(0.315em, 0.5vw, 1em);
+  text-decoration: underline $primaryColor;
+}
+
 
 @include media(tablet) {
   .list {
     font-size: clamp(1rem, 5vw, 3rem);
+  }
+
+  .activeNavLink {
+    text-underline-offset: clamp(0.315em, 1vw, 1em);
   }
 }
