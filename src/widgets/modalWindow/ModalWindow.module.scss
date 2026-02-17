@@ -22,7 +22,7 @@
 .modal {
   position: relative;
   max-height: 90vh;
-  padding: clamp(20px, 3vw, 60px);
+  padding: clamp(20px, 4vw, 60px);
   @include flexWrapper(column, center);
   gap: clamp(1vw, 2vw, 3vw);
   background: $secondaryColor;

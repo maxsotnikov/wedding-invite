@@ -15,6 +15,10 @@ type Props = {
 }
 
 export const RegistryForm = ({onClose, isOpen, className}: Props) => {
+  const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const [name, setName] = useState('')
@@ -31,12 +35,9 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
 
     if (!formRef.current) return
 
-    const formData = new FormData(formRef.current);
-    console.log('Данные перед отправкой:', Object.fromEntries(formData));
-
     emailjs
-      .sendForm('service_k05yrpx', 'template_ft8t548', formRef.current, {
-        publicKey: 'Y3ckFrswkXhxC46dT',
+      .sendForm(emailJsServiceId, emailJsTemplateId, formRef.current, {
+        publicKey: emailJsPublicKey,
       })
       .then(
         () => {

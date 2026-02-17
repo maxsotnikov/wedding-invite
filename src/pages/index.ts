@@ -1,0 +1,6 @@
+export {Header} from '@/widgets/header/Header.tsx'
+export {Footer} from '@/widgets/footer/Footer.tsx'
+export {Home} from './home/Home.tsx'
+export {Info} from './info/Info.tsx'
+export {Location} from './location/Location.tsx'
+export {OurStory} from './ourStory/OurStory.tsx'

@@ -8,7 +8,7 @@ import photo3
 import photo4
   from '@/assets/images/ourStoryPage/olga-solodilova-5RjqNf7a49E-unsplash.webp'
 import photo5
-  from '@/assets/images/ourStoryPage/olga-solodilova--Dc0PI6XWAc-unsplash.webp'
+  from '@/assets/images/ourStoryPage/f05aa32a-9f16-4f15-817d-a471d7a24e48.webp'
 
 export const OurStory = () => {
   return (

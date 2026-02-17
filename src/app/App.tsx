@@ -1,11 +1,6 @@
-import {Header} from '@/widgets/header/Header.tsx';
-import {Home} from '@/pages/home/Home.tsx';
-import {Footer} from '@/widgets/footer/Footer.tsx';
+import {Footer, Header, Home, Info, Location, OurStory} from '@/pages'
 import {Route, Routes} from 'react-router';
-import {Info} from '@/pages/info/Info.tsx';
-import {Location} from '@/pages/location/Location.tsx';
 import {ScrollToTop} from '@/features/scrollToTop/ScrollToTop.tsx';
-import {OurStory} from '@/pages/ourStory/OurStory.tsx';
 
 function App() {
   return (
