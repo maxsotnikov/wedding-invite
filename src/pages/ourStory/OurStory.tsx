@@ -1,12 +1,12 @@
 import style from './OurStory.module.scss';
 import photo1
-  from '@/assets/images/ourStoryPage/olga-solodilova-OK62mLojtY4-unsplash.webp'
+  from '@/assets/images/ourStoryPage/8f009acc-4d6e-450e-bb16-ca1e4ca9de91.webp'
 import photo2
-  from '@/assets/images/ourStoryPage/olga-solodilova-OK62mLojtY4-unsplash23213.webp'
+  from '@/assets/images/ourStoryPage/499a05b4-0253-4831-986c-d88518ebebb0.webp'
 import photo3
-  from '@/assets/images/ourStoryPage/olga-solodilova-f7ibaLlie6w-unsplash.webp'
+  from '@/assets/images/ourStoryPage/203075cc-9a7c-4215-8998-8ed450a944cf.webp'
 import photo4
-  from '@/assets/images/ourStoryPage/olga-solodilova-5RjqNf7a49E-unsplash.webp'
+  from '@/assets/images/ourStoryPage/99e8daf5-83ad-4a5f-84b5-4e3408334140.webp'
 import photo5
   from '@/assets/images/ourStoryPage/f05aa32a-9f16-4f15-817d-a471d7a24e48.webp'
 

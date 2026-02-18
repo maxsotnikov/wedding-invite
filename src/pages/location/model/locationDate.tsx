@@ -12,7 +12,7 @@ export const LOCATION_DATE: InfoBlockType[] = [
         answer: (
           <>
             До места проведения свадьбы возможно добраться на личном
-            автомобиле по данным {' '} <a
+            транспорте по данным {' '} <a
             href="https://yandex.by/maps/org/usadba_maryanino/74793706989/?ll=27.726079%2C54.054349&z=11"
             target="_blank"
             className={style.link}
