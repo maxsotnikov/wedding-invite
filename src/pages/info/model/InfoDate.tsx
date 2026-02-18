@@ -2,6 +2,7 @@ import style from '../Info.module.scss'
 import type {InfoBlockType} from '@/shared/types/infoTypes.ts';
 import {Link} from 'react-router';
 import {ROUTES} from '@/shared/config/routes.ts';
+import {EXTERNAL_LINKS} from '@/shared/config/externalLinks.ts';
 
 export const INFO_DATE: InfoBlockType[] = [
   {
@@ -43,7 +44,7 @@ export const INFO_DATE: InfoBlockType[] = [
           <>
             Самые красивые цветы — те, что дарят радость не на один день. Если вы захотите порадовать нас цветами, вы можете внести любую сумму в нашу цветочную {' '}
             <a
-              href={import.meta.env.VITE_FLOWER_SUBSCRIPTION}
+              href={EXTERNAL_LINKS.flowerSubscription}
               target="_blank"
               rel="noreferrer"
               className={style.link}
