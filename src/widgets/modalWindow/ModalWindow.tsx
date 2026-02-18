@@ -25,7 +25,7 @@ export const ModalWindow = ({isModalOpen,isMobileMenuOpen, onClose}: Props) => {
     <div className={`${style.overlay} ${isModalOpen ? style.isOpen : ''}`}>
       <div
         className={style.modal}
-        onClick={e => e.stopPropagation()}
+        onClick={e => e.stopPropagation()} // на всякий случай, страховка от случайных закрытий, если добавлю onClick={() => onClose()} на overlay.
       >
         <h2 className={style.title}>Регистрация</h2>
         <BurgerButton

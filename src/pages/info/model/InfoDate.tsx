@@ -1,6 +1,7 @@
 import style from '../Info.module.scss'
 import type {InfoBlockType} from '@/shared/types/infoTypes.ts';
 import {Link} from 'react-router';
+import {ROUTES} from '@/shared/config/routes.ts';
 
 export const INFO_DATE: InfoBlockType[] = [
   {
@@ -23,7 +24,7 @@ export const INFO_DATE: InfoBlockType[] = [
           <>
             С данной информацией вы можете более подробно ознакомиться {' '}
             <Link
-              to={'/location'}
+              to={ROUTES.location}
               className={style.link}
             >здесь</Link>
           </>
@@ -44,6 +45,7 @@ export const INFO_DATE: InfoBlockType[] = [
             <a
               href={import.meta.env.VITE_FLOWER_SUBSCRIPTION}
               target="_blank"
+              rel="noreferrer"
               className={style.link}
             >подписку</a>
           </>

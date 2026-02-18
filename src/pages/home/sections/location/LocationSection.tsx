@@ -2,6 +2,8 @@ import style from './LocationSection.module.scss'
 import location
   from '@/assets/images/homePage/location.jpg'
 import {Button} from '@/shared/button/Button.tsx';
+import {ROUTES} from '@/shared/config/routes.ts';
+import {EXTERNAL_LINKS} from '@/shared/config/externalLinks.ts';
 
 export const LocationSection = () => {
   return (
@@ -9,8 +11,9 @@ export const LocationSection = () => {
       <div className={style.container}>
         <div className={style.content}>
           <a
-            href={'https://usadba-m.by/'}
+            href={EXTERNAL_LINKS.manorWebsite}
             target="_blank"
+            rel="noreferrer"
             className={style.link}
           >Усадьба <br className={style.desktopBreak} /> Марьянино</a>
           <div className={style.wrapper}>
@@ -21,13 +24,14 @@ export const LocationSection = () => {
             />
           </div>
           <a
-            href={'https://yandex.by/maps/org/usadba_maryanino/74793706989/?ll=27.726079%2C54.054349&z=11'}
+            href={EXTERNAL_LINKS.manorMap}
             target="_blank"
+            rel="noreferrer"
             className={style.link}
           >Карта</a>
           <Button
             as={'link'}
-            to={'/location'}
+            to={ROUTES.location}
             title={'Проезд и проживание'}
             className={style.button}
           />

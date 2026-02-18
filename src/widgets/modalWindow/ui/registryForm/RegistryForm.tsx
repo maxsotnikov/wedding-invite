@@ -24,16 +24,22 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
   const [name, setName] = useState('')
   const [surname, setSurname] = useState('')
   const [telegram, setTelegram] = useState('')
-  const [radioValues, setRadioValues] = useState<Record<string, string>>({overnight:'', transport:''})
+  const [radioValues, setRadioValues] = useState<Record<string, string>>({
+    overnight: '',
+    transport: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const handleRadioChange = (name: string, value: string) => {
-    setRadioValues(prev => ({ ...prev, [name]: value }));
+    setRadioValues(prev => ({...prev, [name]: value}));
   };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formRef.current) return
+    if (!formRef.current || isSubmitting) return
+
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(emailJsServiceId, emailJsTemplateId, formRef.current, {
@@ -46,15 +52,19 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
           setName('');
           setSurname('');
           setTelegram('');
-          setRadioValues({overnight:'', transport: ''});
+          setRadioValues({overnight: '', transport: ''});
           //очищаем форму после успешной отправки
           if (formRef.current) formRef.current.reset()
           onClose()
         },
         (error) => {
           console.log('FAILED...', error.text);
+          // setIsSubmitting(false);
         },
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false)
+      });
   };
 
   useEffect(() => {
@@ -107,9 +117,10 @@ export const RegistryForm = ({onClose, isOpen, className}: Props) => {
         ))}
       </div>
       <Button
-        title={'Отправить'}
+        title={isSubmitting ? 'Отправка...' : 'Отправить'}
         type={'submit'}
         className={style.button}
+        disabled={isSubmitting}
       />
     </form>
   );

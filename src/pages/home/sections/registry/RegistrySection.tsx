@@ -6,6 +6,7 @@ import style from './RegistrySection.module.scss'
 import {Column} from './column/Column.tsx';
 import {useState} from 'react';
 import {ModalWindow} from '@/widgets/modalWindow/ModalWindow.tsx';
+import {ROUTES} from '@/shared/config/routes.ts';
 
 
 export const RegistrySection = () => {
@@ -30,7 +31,7 @@ export const RegistrySection = () => {
               title={'Информация'}
               buttonTitle={'Вопросы'}
               as={'link'}
-              to={'/info'}
+              to={ROUTES.info}
               alt={'photo dress-code'}
               src={dressCodePhoto}
               text={'Мы с любовью подготовили для вас всю информацию о нашей свадьбе, чтобы этот день был для вас максимально комфортным'}

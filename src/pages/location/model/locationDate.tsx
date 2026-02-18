@@ -1,5 +1,6 @@
 import type {InfoBlockType} from '@/shared/types/infoTypes.ts';
 import style from '../Location.module.scss'
+import {EXTERNAL_LINKS} from '@/shared/config/externalLinks.ts';
 
 export const LOCATION_DATE: InfoBlockType[] = [
   {
@@ -13,8 +14,9 @@ export const LOCATION_DATE: InfoBlockType[] = [
           <>
             До места проведения свадьбы возможно добраться на личном
             транспорте по данным {' '} <a
-            href="https://yandex.by/maps/org/usadba_maryanino/74793706989/?ll=27.726079%2C54.054349&z=11"
+            href={EXTERNAL_LINKS.manorMap}
             target="_blank"
+            rel="noreferrer"
             className={style.link}
           >
             координатам

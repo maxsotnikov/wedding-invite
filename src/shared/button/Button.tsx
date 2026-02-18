@@ -11,6 +11,7 @@ type ButtonProps = CommonProps & {
   onClick?: () => void
   type?: 'submit'
   as?: 'button' //дискриминатор для понятия кнопка это или ссылка
+  disabled?: boolean
 }
 
 type LinkProps = CommonProps & {
@@ -42,6 +43,7 @@ export const Button = (props: Props) => {
       className={styleButton}
       data-variant={variant}
       type={props.type ?? 'button'}
+      disabled={props.disabled}
     >
       {title}
     </button>
